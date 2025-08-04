@@ -1,0 +1,43 @@
+<footer class="w-full bg-cloud text-on-surface mt-auto">
+    <div class="title-tabs max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div>
+            <h4 class="font-semibold mb-3">NAVIGATION</h4>
+            <ul class="space-y-1">
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue"><a
+                        routerLink="/">HOME</a></li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue"><a
+                        routerLink="/portfolio">PORTFOLIO</a></li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue"><a
+                        routerLink="/booking">BOOKING</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4 class="font-semibold text-center mb-3">FOLLOW US</h4>
+            <div class="flex items-center justify-center gap-4">
+                <a href="#" aria-label="Instagram" class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+                    <fa-icon [icon]="faInstagram" />
+                </a>
+                <a href="#" aria-label="Pinterest" class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+                    <fa-icon [icon]="faPinterest" />
+                </a>
+            </div>
+        </div>
+
+        <div class="text-end">
+            <h4 class="font-semibold mb-3">LEGAL</h4>
+            <ul class="title-tabs space-y-1">
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue"><a
+                        routerLink="/terms">Terms of Service</a></li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue"><a
+                        routerLink="/privacy">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="title-tabs text-center border-t-2 border-white py-4">
+        © {{ currentYear }} Celeste Photography. All rights reserved.
+    </div>
+</footer>

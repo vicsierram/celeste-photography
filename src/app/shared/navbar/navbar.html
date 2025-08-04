@@ -1,0 +1,48 @@
+<nav>
+    <mat-toolbar class="justify-between">
+        <div class="flex items-center justify-center text-blue-mid text-sm">
+            <a href="https://www.instagram.com/csierraphotography/" target="_blank" aria-label="Instagram">
+                <fa-icon [icon]="faInstagram"
+                    class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"></fa-icon>
+            </a>
+            <fa-icon [icon]="faPinterestP"
+                class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"></fa-icon>
+        </div>
+
+        <div style="width: 600px;">
+            <ul class="flex items-center justify-between title-tabs font-medium">
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"><a
+                        routerLink="/">HOME</a></li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"><a
+                        routerLink="/portfolio">PORTFOLIO</a></li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+                    <a routerLink="/about">ABOUT</a>
+                </li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:scale-105">
+                    <a routerLink="/">
+                        <img src="./../../../assets/prov-logo.svg" alt="Celeste Sierra logo">
+                    </a>
+                </li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+                    <a routerLink="/booking">BOOKING</a>
+                </li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+                    <a routerLink="/details">DETAILS</a>
+                </li>
+                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+                    <a routerLink="/contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+
+        <button [matMenuTriggerFor]="langmenu" class="flex items-center justify-center text-blue text-sm"
+            aria-label="Language icon">
+            <fa-icon [icon]="faGlobe"
+                class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue-mid hover:scale-105"></fa-icon>
+        </button>
+        <mat-menu #langmenu="matMenu">
+            <button mat-menu-item>ENGLISH</button>
+            <button mat-menu-item>ESPAÑOL</button>
+        </mat-menu>
+    </mat-toolbar>
+</nav>

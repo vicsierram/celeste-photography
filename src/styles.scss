@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+@use "tailwindcss";
+
+@theme {
+  --color-blue: #546376;
+  --color-blue-mid: #C4CCD5;
+  --color-pink: #B37876;
+  --color-pink-mid: #E9BCB9;
+  --color-green: #3D4932;
+  --color-green-mid: #B6BE8A;
+  --color-creamy: #F2DFAF;
+  --color-yellow: #A78A3E;
+  --color-yellow-mid: #E0BE71;
+  --color-moonlight: #081917;
+  --color-sand: #F7F4EE;
+  --color-cloud: #FAF9FD;
+  --font-sans: DM Sans, sans-serif,
+    --font-serif: DM Serif Text, serif,
+}
+
+html {
+  @include mat.theme((color: (primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: "DM Sans, sans-serif",
+      density: 0,
+    ));
+}
+
+body {
+
+  font-family: "DM Sans", sans-serif;
+  background-color: #FFF;
+  color: #081917;
+
+  color-scheme: light;
+  // Reset the user agent margin.
+  margin: 0;
+}
+
+.mat-mdc-menu-panel {
+  background-color: #faf9fd !important;
+  box-shadow: none !important;
+}
+
+.mat-mdc-menu-content,
+.mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text {
+  font-size: 10px !important;
+  letter-spacing: 1.8px !important;
+}
