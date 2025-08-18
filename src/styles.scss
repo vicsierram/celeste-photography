@@ -4,8 +4,8 @@
 @theme {
   --color-blue: #546376;
   --color-blue-mid: #C4CCD5;
-  --color-pink: #B37876;
-  --color-pink-mid: #E9BCB9;
+  --color-pink: #8E3B46;
+  --color-pink-mid: #E8C7CD;
   --color-green: #3D4932;
   --color-green-mid: #B6BE8A;
   --color-creamy: #F2DFAF;
@@ -14,8 +14,9 @@
   --color-moonlight: #081917;
   --color-sand: #F7F4EE;
   --color-cloud: #FAF9FD;
-  --font-sans: DM Sans, sans-serif,
-    --font-serif: DM Serif Text, serif,
+  --font-sans: DM Sans, sans-serif;
+  --font-serif: DM Serif Text, serif;
+  --font-instrument: Instrument Serif, serif;
 }
 
 html {
@@ -28,18 +29,23 @@ html {
 }
 
 body {
-
   font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  letter-spacing: 1.8px;
   background-color: #FFF;
   color: #081917;
 
   color-scheme: light;
-  // Reset the user agent margin.
   margin: 0;
 }
 
+.title-tabs {
+  font-size: 10px;
+  letter-spacing: 1.8px;
+}
+
 .mat-mdc-menu-panel {
-  background-color: #faf9fd !important;
+  background-color: #FFF !important;
   box-shadow: none !important;
 }
 
@@ -47,4 +53,21 @@ body {
 .mat-mdc-menu-content .mat-mdc-menu-item .mat-mdc-menu-item-text {
   font-size: 10px !important;
   letter-spacing: 1.8px !important;
+}
+
+.mat-mdc-menu-content {
+  padding: 0px 0 !important;
+}
+
+.mat-mdc-menu-item:not([disabled]):hover {
+  background-color: #C4CCD5 !important;
+  color: #FFF;
+}
+
+.mat-calendar-body-selected {
+  background-color: #546376 !important;
+}
+
+.mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+  border-color: #546376 !important;
 }

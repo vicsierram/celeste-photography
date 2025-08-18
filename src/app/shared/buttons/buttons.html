@@ -1,0 +1,8 @@
+<button class="cursor-pointer" [ngClass]="[
+    baseClasses,
+    colorClasses[color] || '',
+    sizeClasses[size] || '',
+    variantClasses[variant] || ''
+  ]" [type]="type">
+    <ng-content></ng-content>
+</button>

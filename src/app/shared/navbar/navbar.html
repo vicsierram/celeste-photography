@@ -1,48 +1,98 @@
-<nav>
-    <mat-toolbar class="justify-between">
-        <div class="flex items-center justify-center text-blue-mid text-sm">
-            <a href="https://www.instagram.com/csierraphotography/" target="_blank" aria-label="Instagram">
-                <fa-icon [icon]="faInstagram"
-                    class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"></fa-icon>
-            </a>
-            <fa-icon [icon]="faPinterestP"
-                class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"></fa-icon>
-        </div>
-
-        <div style="width: 600px;">
-            <ul class="flex items-center justify-between title-tabs font-medium">
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"><a
-                        routerLink="/">HOME</a></li>
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"><a
-                        routerLink="/portfolio">PORTFOLIO</a></li>
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
-                    <a routerLink="/about">ABOUT</a>
-                </li>
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:scale-105">
-                    <a routerLink="/">
-                        <img src="./../../../assets/prov-logo.svg" alt="Celeste Sierra logo">
-                    </a>
-                </li>
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
-                    <a routerLink="/booking">BOOKING</a>
-                </li>
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
-                    <a routerLink="/details">DETAILS</a>
-                </li>
-                <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
-                    <a routerLink="/contact">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-
-        <button [matMenuTriggerFor]="langmenu" class="flex items-center justify-center text-blue text-sm"
-            aria-label="Language icon">
-            <fa-icon [icon]="faGlobe"
+<nav class="bg-white shadow-md px-4 py-8 flex items-center justify-between">
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center justify-center text-blue text-sm">
+        <a href="https://www.instagram.com/csierraphotography/" target="_blank" aria-label="Instagram">
+            <fa-icon [icon]="faInstagram"
                 class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue-mid hover:scale-105"></fa-icon>
+        </a>
+        <fa-icon [icon]="faPinterestP"
+            class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue-mid hover:scale-105"></fa-icon>
+    </div>
+
+    <ul class="hidden md:flex gap-8 items-center justify-between title-tabs font-medium">
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"><a
+                routerLink="/">HOME</a></li>
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105"><a
+                routerLink="/portfolio">PORTFOLIO</a></li>
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+            <a routerLink="/about">ABOUT</a>
+        </li>
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:scale-105">
+            <a routerLink="/">
+                <img src="assets/prov-logo.svg" alt="Celeste Sierra logo">
+            </a>
+        </li>
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+            <a routerLink="/booking">BOOKING</a>
+        </li>
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+            <a routerLink="/details">DETAILS</a>
+        </li>
+        <li class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue hover:scale-105">
+            <a routerLink="/contact">CONTACT</a>
+        </li>
+    </ul>
+
+    <button [matMenuTriggerFor]="langmenu" class="flex items-center justify-center text-blue text-sm"
+        aria-label="Language icon">
+        <fa-icon [icon]="faGlobe"
+            class="p-1 mx-1 cursor-pointer transition-all duration-200 ease-in-out hover:text-blue-mid hover:scale-105"></fa-icon>
+    </button>
+    <mat-menu #langmenu="matMenu">
+        <button mat-menu-item>
+            <label class="flex items-center">
+                <input class="mr-2 accent-blue" type="radio" name="lang" value="es"> Español
+            </label>
         </button>
-        <mat-menu #langmenu="matMenu">
-            <button mat-menu-item>ENGLISH</button>
-            <button mat-menu-item>ESPAÑOL</button>
-        </mat-menu>
-    </mat-toolbar>
+        <button mat-menu-item>
+            <label class="flex items-center">
+                <input class="mr-2 accent-blue" type="radio" name="lang" value="en"> English
+            </label>
+        </button>
+
+        <!-- <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group"
+                [(ngModel)]="language">
+                @for (lang of langs; track lang) {
+                <mat-radio-button class="example-radio-button uppercase" [value]="lang">{{lang}}</mat-radio-button>
+                }
+            </mat-radio-group> -->
+    </mat-menu>
+
+    <a routerLink="/" class="flex md:hidden cursor-pointer transition-all duration-200 ease-in-out hover:scale-105">
+        <img src="assets/prov-logo.svg" alt="Celeste Sierra logo">
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button (click)="toggleMenu()" class="md:hidden focus:outline-none" aria-label="Toggle Menu">
+        @if (!menuOpen) {
+        <mat-icon>menu</mat-icon>
+        }
+        @if (menuOpen) {
+        <mat-icon>menu</mat-icon>
+        }
+    </button>
 </nav>
+
+<!-- Mobile Menu -->
+@if (menuOpen) {
+<div
+    class="md:hidden absolute w-screen h-screen bg-white/80 shadow-md flex flex-col justify-center px-4 py-4 space-y-4 pointer-events-auto z-50">
+    <div class="flex flex-col items-center gap-8">
+        <a routerLink="/" (click)="closeMenu()">HOME</a>
+        <a routerLink="/portfolio" (click)="closeMenu()">PORTFOLIO</a>
+        <a routerLink="/about" (click)="closeMenu()">ABOUT</a>
+        <a routerLink="/" (click)="closeMenu()">
+            <img src="./../../../assets/prov-logo.svg" alt="Celeste Sierra logo">
+        </a>
+        <a routerLink="/booking" (click)="closeMenu()">BOOKING</a>
+        <a routerLink="/details" (click)="closeMenu()">DETAILS</a>
+        <a routerLink="/contact" (click)="closeMenu()">CONTACT</a>
+
+
+        <a href="https://www.instagram.com/csierraphotography/" target="_blank" aria-label="Instagram">
+            <fa-icon [icon]="faInstagram" class="p-1 mx-1 text-sm"></fa-icon>
+        </a>
+        <fa-icon [icon]="faPinterestP" class="p-1 mx-1 text-sm"></fa-icon>
+    </div>
+</div>
+}

@@ -1,4 +1,18 @@
-.title-text {
-    font-size: 12px;
-    letter-spacing: 1.8px;
+.booking {
+    .calendar-text-font {
+        font-family: "DM Sans";
+    }
+
+    .calendar-body-label-text-color {
+        color: red;
+    }
+
+    .mat-calendar-body-selected {
+        background-color: red !important;
+
+    }
+
+    .mat-calendar-body-cell-content {
+        border-color: red;
+    }
 }
