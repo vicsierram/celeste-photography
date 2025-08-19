@@ -72,18 +72,17 @@
             </div>
             }
         </div> -->
-        <div class="container grid md:grid-cols-3 gap-4 px-4 mx-auto">
+        <div class="container grid md:grid-cols-3 gap-2 px-4 mx-auto">
 
             @for (type of serviceType; track $index) {
-            <div routerLink="/portfolio" class="relative group rounded-xl overflow-hidden cursor-pointer shadow-md">
+            <div routerLink="/portfolio"
+                class="relative group flex items-center justify-center rounded-xl overflow-hidden cursor-pointer shadow-md">
 
                 <img [src]="type.image" [alt]="type.title"
                     class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-
-                <div class="absolute bottom-4 left-4 z-10">
-                    <span class="bg-white/20 backdrop-blur-sm text-white font-serif italic px-4 py-2 rounded">
+                <div class="absolute z-10">
+                    <span class="bg-white/20 backdrop-blur-sm text-white font-serif italic px-4 py-6 rounded">
                         {{ type.title }}
                     </span>
                 </div>
@@ -157,48 +156,50 @@
     <h2 class="font-serif font-light text-2xl md:text-3xl text-center mb-6">Book the Experience</h2>
     <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 h-126 p-6">
         <div class="md:flex gap-2">
-            <div class="bg-cloud rounded-2xl w-3xs p-6">
-                <p class="mb-4 text-gray-400">Details</p>
+            <div class="bg-cloud rounded-2xl w-3xs px-6 py-10">
+                <p class="mb-4 text-gray-400 uppercase">Details</p>
                 <ul class="flex flex-col gap-6">
-                    <li class="flex gap-4">
-                        <fa-icon [icon]="faClock"></fa-icon>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faClock" class="p-2 text-xs"></fa-icon>
                         8 hours coverage
                     </li>
-                    <li class="flex gap-4">
-                        <fa-icon [icon]="faImage"></fa-icon>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faImage" class="p-2 text-xs"></fa-icon>
                         200+ edited images
                     </li>
-                    <li class="flex gap-4">
-                        <fa-icon [icon]="faImages"></fa-icon>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faImages" class="p-2 text-xs"></fa-icon>
                         Online gallery
                     </li>
-                    <li class="flex gap-4">
-                        <fa-icon [icon]="faGlobe"></fa-icon>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faGlobe" class="p-2 text-xs"></fa-icon>
                         Worldwide travel
                     </li>
                 </ul>
             </div>
             <div class="w-sm bg-cloud rounded-2xl">
                 <mat-calendar [(selected)]="selected" [minDate]="minDate"></mat-calendar>
-
-                <!-- <p>Selected date: {{selected()}}</p> -->
             </div>
         </div>
-        <div class="w-sm rounded-2xl p-6 border-1 border-blue-mid">
+        <div class="w-xs rounded-2xl px-6 py-10 bg-blue-mid/20">
             <form class="space-y-8">
                 <!-- Package -->
-                <mat-form-field appearance="fill">
-                    <mat-label>Type of Service</mat-label>
-                    <mat-select>
-                        <mat-option value="Wedding">Wedding</mat-option>
-                        <mat-option value="Session">Session</mat-option>
-                        <mat-option value="Lifestyle">Lifestyle</mat-option>
-                    </mat-select>
-                </mat-form-field>
+                <div>
+                    <label for="package" class="block mb-2 uppercase text-gray-600">
+                        Package
+                    </label>
+                    <select id="package" name="package"
+                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent">
+                        <option value="">Select a package</option>
+                        <option value="classic">Classic</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="signature">Signature</option>
+                    </select>
+                </div>
 
                 <!-- Country -->
                 <div>
-                    <label for="country" class="block mb-2 font-serif text-sm tracking-wide uppercase text-gray-600">
+                    <label for="country" class="block mb-2 uppercase text-gray-600">
                         Country
                     </label>
                     <input type="text" id="country" name="country" placeholder="Italy, Mexico, USA..."
@@ -207,7 +208,7 @@
 
                 <!-- State / Region -->
                 <div>
-                    <label for="state" class="block mb-2 font-serif text-sm tracking-wide uppercase text-gray-600">
+                    <label for="state" class="block mb-2 uppercase text-gray-600">
                         State / Region
                     </label>
                     <input type="text" id="state" name="state" placeholder="Tuscany, Jalisco, California..."
@@ -216,7 +217,7 @@
 
                 <!-- Venue -->
                 <div>
-                    <label for="venue" class="block mb-2 font-serif text-sm tracking-wide uppercase text-gray-600">
+                    <label for="venue" class="block mb-2 uppercase text-gray-600">
                         Venue
                     </label>
                     <input type="text" id="venue" name="venue" placeholder="Villa Balbiano, Casa Hyder..."
@@ -231,4 +232,29 @@
             Check pricing
         </app-buttons>
     </div>
+</section>
+
+<section class="contact text-center py-10 mb-6">
+    <h1 class="uppercase mt-1 mb-6">Contact</h1>
+    <h2 class="font-serif font-light text-2xl md:text-3xl text-center">Let's do this!</h2>
+    <p class="mb-8">We would love to hear about you and your event</p>
+    <app-buttons routerLink="/contact" color="primary" size="md" variant="solid">Inquire</app-buttons>
+</section>
+
+<section class="work py-10 mb-6">
+    <div class="scroll-container max-w-4xl mx-auto">
+        <div class="scroll-grid mb-2">
+            <img src="assets/couple.jpg" alt="">
+            <img src="assets/portrait.jpg" alt="">
+            <img src="assets/detwedd.jpg" alt="">
+            <img src="assets/welcome.jpg" alt="">
+        </div>
+        <div class="scroll-grid">
+            <img src="assets/couple.jpg" alt="">
+            <img src="assets/portrait.jpg" alt="">
+            <img src="assets/detwedd.jpg" alt="">
+            <img src="assets/welcome.jpg" alt="">
+        </div>
+    </div>
+
 </section>
