@@ -2,12 +2,12 @@
 @use "tailwindcss";
 
 @theme {
-  --color-blue: #546376;
-  --color-blue-mid: #C4CCD5;
+  --color-blue: #364B7A;
+  --color-blue-mid: #C1C8E4;
   --color-pink: #8E3B46;
   --color-pink-mid: #E8C7CD;
-  --color-green: #3D4932;
-  --color-green-mid: #B6BE8A;
+  --color-green: #0D2B1D;
+  --color-green-mid: #AEC3B0;
   --color-creamy: #F2DFAF;
   --color-yellow: #A78A3E;
   --color-yellow-mid: #E0BE71;
@@ -60,14 +60,18 @@ body {
 }
 
 .mat-mdc-menu-item:not([disabled]):hover {
-  background-color: #C4CCD5 !important;
+  background-color: #C1C8E4 !important;
   color: #FFF;
 }
 
 .mat-calendar-body-selected {
-  background-color: #546376 !important;
+  background-color: #364B7A !important;
 }
 
 .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
-  border-color: #546376 !important;
+  border-color: #364B7A !important;
+}
+
+.container-background-color {
+    background-color: red !important;
 }

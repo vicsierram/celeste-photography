@@ -17,31 +17,8 @@
     </div>
 </section>
 
-<!-- <section class="portfolio py-10 mb-6">
-    <h1 class="text-center uppercase mt-1 mb-6">Portfolio</h1>
-    <div class="container grid md:grid-cols-3 gap-4 px-4 mx-auto">
-      
-        @for (type of serviceType; track $index) {
-        <div routerLink="/portfolio" class="relative group rounded-xl overflow-hidden cursor-pointer shadow-md">
-
-            <img [src]="type.image" [alt]="type.title"
-                class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
-
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-
-            <div class="absolute bottom-4 left-4 z-10">
-                <span class="bg-white/20 backdrop-blur-sm text-white font-serif italic px-4 py-2 rounded">
-                    {{ type.title }}
-                </span>
-            </div>
-        </div>
-        }
-    </div>
-</section> -->
-
-<section class="portfolio py-16">
+<section class="portfolio py-10 mb-6">
     <div class="max-w-6xl mx-auto px-6">
-
         <div class="mb-12 text-left md:text-center">
             <h1 class="text-center uppercase mt-1 mb-6">Portfolio</h1>
             <h2 class="font-serif font-light text-2xl md:text-3xl text-center mb-6">
@@ -49,40 +26,20 @@
             </h2>
         </div>
 
-        <!-- <div class="grid grid-cols-1 md:grid-cols-6 gap-6">
-            <div routerLink="/portfolio"
-                class="relative group md:col-span-3 md:row-span-2 rounded-2xl overflow-hidden cursor-pointer">
-                <img src="assets/couple.jpg"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div class="absolute bottom-6 left-6 text-white">
-                    <h3 class="font-serif text-2xl">Weddings</h3>
-                </div>
-            </div>
-
-            @for (type of serviceType; track $index) {
-            <div [routerLink]="type.link"
-                class="relative group md:col-span-3 aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer">
-                <img [src]="type.image"
-                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 text-white">
-                    <h3 class="font-serif text-lg">{{ type.title }}</h3>
-                </div>
-            </div>
-            }
-        </div> -->
-        <div class="container grid md:grid-cols-3 gap-2 px-4 mx-auto">
-
+        <div class="container grid md:grid-cols-3 gap-1 px-4 mx-auto mb-12">
             @for (type of serviceType; track $index) {
             <div routerLink="/portfolio"
-                class="relative group flex items-center justify-center rounded-xl overflow-hidden cursor-pointer shadow-md">
+                class="relative group flex items-center justify-center overflow-hidden cursor-pointer shadow-md">
 
                 <img [src]="type.image" [alt]="type.title"
                     class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
 
+                <div
+                    class="absolute inset-0 bg-black/40 opacity-40 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+
                 <div class="absolute z-10">
-                    <span class="bg-white/20 backdrop-blur-sm text-white font-serif italic px-4 py-6 rounded">
+                    <span class="text-2xl text-white font-serif p-2">
                         {{ type.title }}
                     </span>
                 </div>
@@ -90,9 +47,109 @@
             }
         </div>
     </div>
+
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-1 p-1 my-12">
+        @for (item of portfolioGrid; track $index) {
+        <img [src]="item" class="mb-1 w-full">
+        }
+    </div>
+
+    <app-buttons routerLink="/portfolio" class="flex justify-center" variant="solid" color="primary" size="lg">View
+        Portfolio</app-buttons>
 </section>
 
-<section class="about relative py-20">
+<section class="booking py-10 mb-6">
+    <h1 class="text-center uppercase mt-1 mb-6">Booking</h1>
+    <h2 class="font-serif font-light text-2xl md:text-3xl text-center mb-6">Book the Experience</h2>
+    <div class="md:flex justify-center items-stretch gap-8 h-126 p-6">
+        <div class="md:flex gap-2">
+            <div class="bg-cloud rounded-2xl w-3xs px-6 py-10">
+                <p class="mb-4 text-gray-400 uppercase">Details</p>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faClock" class="p-2 text-xs"></fa-icon>
+                        Flexible coverage
+                    </li>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faEdit" class="p-2 text-xs"></fa-icon>
+                        Professionally retouched
+                    </li>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faImages" class="p-2 text-xs"></fa-icon>
+                        Online gallery
+                    </li>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faHeadset" class="p-2 text-xs"></fa-icon>
+                        Pre-shoot consultation
+                    </li>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faDelivery" class="p-2 text-xs"></fa-icon>
+                        Fast delivery (2–4 weeks)
+                    </li>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faGlobe" class="p-2 text-xs"></fa-icon>
+                        Worldwide travel
+                    </li>
+                    <li class="flex gap-4 items-center">
+                        <fa-icon [icon]="faImage" class="p-2 text-xs"></fa-icon>
+                        Optional prints & albums
+                    </li>
+                </ul>
+            </div>
+            <div class="w-sm bg-cloud rounded-2xl">
+                <mat-calendar [(selected)]="selected" [minDate]="minDate"></mat-calendar>
+            </div>
+        </div>
+        <!-- <div class="w-xs rounded-2xl px-6 py-10 bg-blue-mid/20">
+            <form class="space-y-8">
+                <div>
+                    <label for="package" class="block mb-2 uppercase text-gray-600">
+                        Package
+                    </label>
+                    <select id="package" name="package"
+                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent">
+                        <option value="">Select a package</option>
+                        <option value="classic">Classic</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="signature">Signature</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="country" class="block mb-2 uppercase text-gray-600">
+                        Country
+                    </label>
+                    <input type="text" id="country" name="country" placeholder="Italy, Mexico, USA..."
+                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent placeholder-gray-400" />
+                </div>
+
+                <div>
+                    <label for="state" class="block mb-2 uppercase text-gray-600">
+                        State / Region
+                    </label>
+                    <input type="text" id="state" name="state" placeholder="Tuscany, Jalisco, California..."
+                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent placeholder-gray-400" />
+                </div>
+
+                <div>
+                    <label for="venue" class="block mb-2 uppercase text-gray-600">
+                        Venue
+                    </label>
+                    <input type="text" id="venue" name="venue" placeholder="Villa Balbiano, Casa Hyder..."
+                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent placeholder-gray-400" />
+                </div>
+            </form>
+        </div> -->
+    </div>
+
+    <div class="text-center">
+        <app-buttons routerLink="/about" type="submit" color="primary" size="md" variant="solid">
+            Check pricing
+        </app-buttons>
+    </div>
+</section>
+
+<section class="about relative py-10 mb-6">
     <h1 class="text-center uppercase mt-1 mb-6">About</h1>
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
@@ -144,93 +201,9 @@
 
             <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <h2 class="font-serif text-xl font-bold mb-1">{{ card.title }}</h2>
-                <p class="text-sm opacity-90">Elegant, timeless, and full of emotion.</p>
             </div>
         </div>
         }
-    </div>
-</section>
-
-<section class="booking py-10 mb-6">
-    <h1 class="text-center uppercase mt-1 mb-6">Booking</h1>
-    <h2 class="font-serif font-light text-2xl md:text-3xl text-center mb-6">Book the Experience</h2>
-    <div class="flex flex-col md:flex-row justify-center items-stretch gap-8 h-126 p-6">
-        <div class="md:flex gap-2">
-            <div class="bg-cloud rounded-2xl w-3xs px-6 py-10">
-                <p class="mb-4 text-gray-400 uppercase">Details</p>
-                <ul class="flex flex-col gap-6">
-                    <li class="flex gap-4 items-center">
-                        <fa-icon [icon]="faClock" class="p-2 text-xs"></fa-icon>
-                        8 hours coverage
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <fa-icon [icon]="faImage" class="p-2 text-xs"></fa-icon>
-                        200+ edited images
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <fa-icon [icon]="faImages" class="p-2 text-xs"></fa-icon>
-                        Online gallery
-                    </li>
-                    <li class="flex gap-4 items-center">
-                        <fa-icon [icon]="faGlobe" class="p-2 text-xs"></fa-icon>
-                        Worldwide travel
-                    </li>
-                </ul>
-            </div>
-            <div class="w-sm bg-cloud rounded-2xl">
-                <mat-calendar [(selected)]="selected" [minDate]="minDate"></mat-calendar>
-            </div>
-        </div>
-        <div class="w-xs rounded-2xl px-6 py-10 bg-blue-mid/20">
-            <form class="space-y-8">
-                <!-- Package -->
-                <div>
-                    <label for="package" class="block mb-2 uppercase text-gray-600">
-                        Package
-                    </label>
-                    <select id="package" name="package"
-                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent">
-                        <option value="">Select a package</option>
-                        <option value="classic">Classic</option>
-                        <option value="deluxe">Deluxe</option>
-                        <option value="signature">Signature</option>
-                    </select>
-                </div>
-
-                <!-- Country -->
-                <div>
-                    <label for="country" class="block mb-2 uppercase text-gray-600">
-                        Country
-                    </label>
-                    <input type="text" id="country" name="country" placeholder="Italy, Mexico, USA..."
-                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent placeholder-gray-400" />
-                </div>
-
-                <!-- State / Region -->
-                <div>
-                    <label for="state" class="block mb-2 uppercase text-gray-600">
-                        State / Region
-                    </label>
-                    <input type="text" id="state" name="state" placeholder="Tuscany, Jalisco, California..."
-                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent placeholder-gray-400" />
-                </div>
-
-                <!-- Venue -->
-                <div>
-                    <label for="venue" class="block mb-2 uppercase text-gray-600">
-                        Venue
-                    </label>
-                    <input type="text" id="venue" name="venue" placeholder="Villa Balbiano, Casa Hyder..."
-                        class="w-full border-b border-gray-300 focus:border-black focus:ring-0 rounded-none px-0 py-2 bg-transparent placeholder-gray-400" />
-                </div>
-            </form>
-        </div>
-    </div>
-    <!-- Submit -->
-    <div class="text-center">
-        <app-buttons routerLink="/about" type="submit" color="primary" size="md" variant="solid">
-            Check pricing
-        </app-buttons>
     </div>
 </section>
 
@@ -241,20 +214,60 @@
     <app-buttons routerLink="/contact" color="primary" size="md" variant="solid">Inquire</app-buttons>
 </section>
 
-<section class="work py-10 mb-6">
-    <div class="scroll-container max-w-4xl mx-auto">
-        <div class="scroll-grid mb-2">
-            <img src="assets/couple.jpg" alt="">
-            <img src="assets/portrait.jpg" alt="">
-            <img src="assets/detwedd.jpg" alt="">
-            <img src="assets/welcome.jpg" alt="">
-        </div>
-        <div class="scroll-grid">
-            <img src="assets/couple.jpg" alt="">
-            <img src="assets/portrait.jpg" alt="">
-            <img src="assets/detwedd.jpg" alt="">
-            <img src="assets/welcome.jpg" alt="">
-        </div>
+<section class="testimonials py-10 mb-6">
+    <h1 class="uppercase text-center mt-1 mb-6">What they say</h1>
+    <h2 class="font-serif font-light mb-6 text-2xl md:text-3xl text-center">Words from our clients</h2>
+    <div class="container grid md:grid-cols-3 gap-6 mx-auto">
+        <article class="flex flex-col items-center bg-cloud/50 shadow-xs p-6 rounded-2xl">
+            <img src="assets/couple.jpg" class="w-24 h-24 object-cover rounded-full"
+                alt="Celeste and Charles wedding photo">
+            <p class="font-serif text-lg font-bold mt-4">Celeste & Charles</p>
+            <p class="text-center text-gray-600 mt-2">
+                If you're not using testimonials, you're missing out on a golden opportunity
+                to turn visitors and potential buyers into actual customers.
+            </p>
+            <fa-icon [icon]="faQuote" class="text-pink text-xl my-2"></fa-icon>
+        </article>
+        <article class="flex flex-col items-center bg-cloud/50 shadow-xs p-6 rounded-2xl">
+            <img src="assets/couple.jpg" class="w-24 h-24 object-cover rounded-full"
+                alt="Celeste and Charles wedding photo">
+            <p class="font-serif text-lg font-bold mt-4">Celeste & Charles</p>
+            <p class="text-center text-gray-600 mt-2">
+                If you're not using testimonials, you're missing out on a golden opportunity
+                to turn visitors and potential buyers into actual customers.
+            </p>
+            <fa-icon [icon]="faQuote" class="text-pink text-xl my-2"></fa-icon>
+        </article>
+        <article class="flex flex-col items-center bg-cloud/50 shadow-xs p-6 rounded-2xl">
+            <img src="assets/couple.jpg" class="w-24 h-24 object-cover rounded-full"
+                alt="Celeste and Charles wedding photo">
+            <p class="font-serif text-lg font-bold mt-4">Celeste & Charles</p>
+            <p class="text-center text-gray-600 mt-2">
+                If you're not using testimonials, you're missing out on a golden opportunity
+                to turn visitors and potential buyers into actual customers.
+            </p>
+            <fa-icon [icon]="faQuote" class="text-pink text-xl my-2"></fa-icon>
+        </article>
+        <article class="flex flex-col items-center bg-cloud/50 shadow-xs p-6 rounded-2xl">
+            <img src="assets/couple.jpg" class="w-24 h-24 object-cover rounded-full"
+                alt="Celeste and Charles wedding photo">
+            <p class="font-serif text-lg font-bold mt-4">Celeste & Charles</p>
+            <p class="text-center text-gray-600 mt-2">
+                If you're not using testimonials, you're missing out on a golden opportunity
+                to turn visitors and potential buyers into actual customers.
+            </p>
+            <fa-icon [icon]="faQuote" class="text-pink text-xl my-2"></fa-icon>
+        </article>
+        <article class="flex flex-col items-center bg-cloud/50 shadow-xs p-6 rounded-2xl">
+            <img src="assets/couple.jpg" class="w-24 h-24 object-cover rounded-full"
+                alt="Celeste and Charles wedding photo">
+            <p class="font-serif text-lg font-bold mt-4">Celeste & Charles</p>
+            <p class="text-center text-gray-600 mt-2">
+                If you're not using testimonials, you're missing out on a golden opportunity
+                to turn visitors and potential buyers into actual customers.
+            </p>
+            <fa-icon [icon]="faQuote" class="text-pink text-xl my-2"></fa-icon>
+        </article>
     </div>
 
 </section>

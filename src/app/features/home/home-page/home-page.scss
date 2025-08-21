@@ -2,46 +2,4 @@
     .calendar-text-font {
         font-family: "DM Sans";
     }
-
-    .calendar-body-label-text-color {
-        color: red;
-    }
-
-    .mat-calendar-body-selected {
-        background-color: red !important;
-
-    }
-
-    .mat-calendar-body-cell-content {
-        border-color: red;
-    }
-}
-
-.work {
-    .scroll-container {
-        height: 400px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .scroll-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        animation: scroll-up 15s linear infinite;
-    }
-
-    @keyframes scroll-up {
-        0% {
-            transform: translateY(0);
-        }
-
-        100% {
-            transform: translateY(-100%);
-        }
-    }
-
-    .scroll-container img {
-        width: 100%;
-    }
 }
