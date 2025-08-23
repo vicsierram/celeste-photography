@@ -28,7 +28,7 @@
 
         <div class="container grid md:grid-cols-3 gap-1 px-4 mx-auto mb-12">
             @for (type of serviceType; track $index) {
-            <div routerLink="/portfolio"
+            <div [routerLink]="type.link"
                 class="relative group flex items-center justify-center overflow-hidden cursor-pointer shadow-md">
 
                 <img [src]="type.image" [alt]="type.title"

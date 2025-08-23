@@ -1,1 +1,42 @@
-<p>portfolio-overview works!</p>
+<div class="container mx-auto">
+    <nav class="flex justify-center my-10">
+        <ul class="flex uppercase gap-6">
+            <li>
+                <a routerLink="/portfolio" routerLinkActive="text-blue border-b-2 border-blue"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                    All
+                </a>
+            </li>
+            <li>
+                <a routerLink="/portfolio/weddings" routerLinkActive="text-blue border-b-2 border-blue"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1">
+                    Weddings
+                </a>
+            </li>
+            <li>
+                <a routerLink="/portfolio/engagements" routerLinkActive="text-blue border-b-2 border-blue"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1">
+                    Engagements
+                </a>
+            </li>
+            <li>
+                <a routerLink="/portfolio/photoshoots" routerLinkActive="text-blue border-b-2 border-blue"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1">
+                    Photoshoots
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="grid md:grid-cols-3 gap-2">
+        @for (img of images; track $index) {
+        <div class="cursor-pointer">
+            <a [routerLink]="['/portfolio/gallery', img.id]">
+                <img [src]="img.coverUrl" [alt]="img.title" class="w-full h-96 object-cover shadow-sm" />
+                <p class="mt-2 text-center font-semibold">{{ img.title }}</p>
+            </a>
+        </div>
+        }
+    </div>
+</div>

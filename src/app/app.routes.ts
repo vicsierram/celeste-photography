@@ -18,7 +18,11 @@ export const routes: Routes = [
         component: PortfolioOverview,
     },
     {
-        path: 'portfolio/gallery',
+        path: 'portfolio/:category',
+        component: PortfolioOverview,
+    },
+    {
+        path: 'portfolio/gallery/:id',
         component: PortfolioGallery
     },
     {

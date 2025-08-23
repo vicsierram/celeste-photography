@@ -51,17 +51,17 @@ export class HomePage {
     {
       title: 'Weddings',
       image: 'assets/couple.jpg',
-      link: '/portfolio'
+      link: '/portfolio/weddings'
     },
     {
       title: 'Engagements',
       image: 'assets/portrait.jpg',
-      link: '/portfolio'
+      link: '/portfolio/engagements'
     },
     {
       title: 'Photoshoots',
       image: 'assets/details.jpg',
-      link: '/portfolio'
+      link: '/portfolio/photoshoots'
     }
   ]
 
