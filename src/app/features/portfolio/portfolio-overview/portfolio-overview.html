@@ -1,40 +1,48 @@
-<div class="container mx-auto">
-    <nav class="flex justify-center my-10">
-        <ul class="flex uppercase gap-6">
+<div class="container mx-auto px-4 mb-20">
+    <nav class="nav-portfolio flex justify-center my-8">
+        <ul class="flex flex-col items-center md:flex-row uppercase gap-6">
             <li>
-                <a routerLink="/portfolio" routerLinkActive="text-blue border-b-2 border-blue"
-                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1"
+                <a routerLink="/portfolio" routerLinkActive="text-gray-400"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1"
                     [routerLinkActiveOptions]="{ exact: true }">
                     All
                 </a>
             </li>
             <li>
-                <a routerLink="/portfolio/weddings" routerLinkActive="text-blue border-b-2 border-blue"
-                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1">
+                <a routerLink="/portfolio/weddings" routerLinkActive="text-gray-400"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1">
                     Weddings
                 </a>
             </li>
             <li>
-                <a routerLink="/portfolio/engagements" routerLinkActive="text-blue border-b-2 border-blue"
-                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1">
+                <a routerLink="/portfolio/engagements" routerLinkActive="text-gray-400"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1">
                     Engagements
                 </a>
             </li>
             <li>
-                <a routerLink="/portfolio/photoshoots" routerLinkActive="text-blue border-b-2 border-blue"
-                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-blue pb-1">
+                <a routerLink="/portfolio/photoshoots" routerLinkActive="text-gray-400"
+                    class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1">
                     Photoshoots
                 </a>
             </li>
         </ul>
     </nav>
 
-    <div class="grid md:grid-cols-3 gap-2">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-2 mx-6">
         @for (img of images; track $index) {
-        <div class="cursor-pointer">
-            <a [routerLink]="['/portfolio/gallery', img.id]">
-                <img [src]="img.coverUrl" [alt]="img.title" class="w-full h-96 object-cover shadow-sm" />
-                <p class="mt-2 text-center font-semibold">{{ img.title }}</p>
+        <div class="relative group cursor-pointer">
+            <a [routerLink]="['/portfolio/gallery', img.id]" class="block">
+                <img [src]="img.coverUrl" [alt]="img.title || 'Gallery image'" class="w-full h-[28rem] object-cover">
+
+                <div
+                    class="absolute inset-0 flex flex-col items-center justify-center px-4 m-6 opacity-100 md:bg-black/50 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 text-center text-white">
+
+                    <h3 class="font-serif text-xs tracking-wide">{{ img.title }}</h3>
+                    <p class="italic text-sm">{{ img.location }}</p>
+                    <span class="my-2">—</span>
+                    <span class="uppercase text-[11px] tracking-wider">View Gallery</span>
+                </div>
             </a>
         </div>
         }

@@ -1,22 +1,18 @@
-<div class="container mx-auto my-6 grid gap-4 lg:grid-cols-3">
-    <!-- Left 2/3 -->
+<!-- <div class="container mx-auto my-6 grid gap-4 lg:grid-cols-3">
     <div class="grid gap-4 lg:col-span-2">
 
-        <!-- Top Row -->
         <div class="grid sm:grid-cols-3 gap-4">
-            <!-- Big text box -->
             <div class="bg-pink-mid/40 rounded-3xl sm:col-span-2 p-8 flex items-end">
                 <p class="font-serif font-light text-2xl md:text-3xl mb-6">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempor felis magna, vitae semper ipsum
                     tristique in. Nullam malesuada consequat luctus.
                 </p>
             </div>
-            <!-- Image -->
+
             <img class="w-full h-48 sm:h-full object-cover object-center rounded-3xl" src="assets/about.jpg"
                 alt="Celeste Sierra">
         </div>
 
-        <!-- Bottom Row -->
         <div class="grid sm:grid-cols-2 gap-4">
             <div class="bg-pink-mid/40 rounded-3xl flex flex-col justify-end p-8">
                 <p>
@@ -40,10 +36,8 @@
         </div>
     </div>
 
-    <!-- Right Sidebar -->
     <div class="h-64 lg:h-[80vh] grid grid-rows-[1fr_auto] gap-4">
 
-        <!-- Top Content (fills most height) -->
         <div class="bg-pink-mid/40 rounded-3xl p-8">
             <mat-accordion>
                 <mat-expansion-panel [expanded]="true">
@@ -69,11 +63,38 @@
             </mat-accordion>
         </div>
 
-        <!-- Bottom Socials (auto height) -->
         <div class="bg-pink-mid/40 rounded-3xl flex gap-6 justify-center items-center p-8 uppercase">
             <p>Instagram</p>
             <p>Pinterest</p>
         </div>
     </div>
+</div> -->
 
+<div class="h-screen w-full snap-y snap-mandatory overflow-y-scroll scroll-smooth font-serif">
+    <section class="relative h-screen w-full snap-start grid grid-cols-1 md:grid-cols-2">
+        <div class="flex flex-col justify-center px-12 bg-neutral-50">
+            <h1 class="text-5xl md:text-6xl font-light uppercase leading-tight tracking-wide break-normal">
+                Guadalajara, Mexico
+            </h1>
+            <p class="mt-6 text-lg text-neutral-600">
+                Six years of refined photography. Timeless, elegant, and designed for the moments that matter most.
+            </p>
+        </div>
+        <div class="relative bg-neutral-200">
+            <img class="absolute bottom-0 left-1/2 -translate-x-1/2 w-2/3 md:w-3/4 object-contain" src="assets/self-noback.png" alt="">
+        </div>
+    </section>
+
+    <section class="h-screen w-full bg-neutral-100 snap-start flex items-center justify-center">
+        <div class="max-w-2xl text-center">
+            <h2 class="text-5xl md:text-7xl font-light uppercase tracking-tight">Our Philosophy</h2>
+            <p class="mt-6 text-lg text-neutral-700 leading-relaxed">
+                We capture love stories with a balance of artistry and authenticity — a luxurious editorial touch with heartfelt emotion.
+            </p>
+        </div>
+    </section>
+
+    <section class="h-screen w-full bg-neutral-900 text-white snap-start flex items-center justify-center">
+        <h2 class="text-6xl md:text-8xl font-light tracking-wide uppercase">Portfolio</h2>
+    </section>
 </div>

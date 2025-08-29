@@ -1,25 +1,128 @@
-@if (item) {
-<div class="relative w-full h-[60vh] md:h-[70vh]">
-    <img [src]="item.hero" class="absolute inset-0 w-full h-full object-cover object-center" [alt]="item.title">
+<nav class="nav-portfolio flex justify-center my-8">
+    <ul class="flex flex-col items-center md:flex-row uppercase gap-6">
+        <li>
+            <a routerLink="/portfolio" routerLinkActive="text-gray-400"
+                class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1"
+                [routerLinkActiveOptions]="{ exact: true }">
+                All
+            </a>
+        </li>
+        <li>
+            <a routerLink="/portfolio/weddings" routerLinkActive="text-gray-400"
+                class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1">
+                Weddings
+            </a>
+        </li>
+        <li>
+            <a routerLink="/portfolio/engagements" routerLinkActive="text-gray-400"
+                class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1">
+                Engagements
+            </a>
+        </li>
+        <li>
+            <a routerLink="/portfolio/photoshoots" routerLinkActive="text-gray-400"
+                class="cursor-pointer transition-all duration-200 ease-in-out hover:text-gray-400 pb-1">
+                Photoshoots
+            </a>
+        </li>
+    </ul>
+</nav>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+@if (isLoading) {
+<div class="space-y-4 mb-8">
+    <div class="w-full h-64 bg-gray-200 rounded-xl animate-pulse"></div>
 
-    <div class="relative z-10 flex flex-col justify-center items-center h-full text-white px-6 md:px-20">
-        <p class="italic capitalize">{{ item.description }}</p>
-        <h1 class="uppercase font-serif text-5xl md:text-6xl leading-tight">
-            {{ item.title }}
-        </h1>
-        <h2 class="uppercase text-xs">{{ item.location }}</h2>
-    </div>
-</div>
-
-<div class="max-w-6xl mx-auto px-4 py-8">
-    <div class="columns-1 sm:columns-2 md:columns-2 gap-2">
-        @for (img of images; track $index) {
-        <div class="mb-2 break-inside-avoid overflow-hidden">
-            <img [src]="img" alt="{{ item.title }}" class="w-full h-full object-cover">
+    <div class="max-w-4xl mx-auto px-6 py-8">
+        <div class="columns-1 sm:columns-2 md:columns-2 gap-2">
+            <div class="mb-2 h-64 w-full bg-gray-200 rounded-lg animate-pulse"></div>
+            <div class="mb-2 h-64 w-full bg-gray-200 rounded-lg animate-pulse"></div>
         </div>
-        }
+    </div>
+
+    <div class="max-w-4xl mx-auto flex justify-center">
+        <div class="h-4 w-1/2 bg-gray-200 rounded animate-pulse"></div>
     </div>
 </div>
+}
+
+@else if (!isLoading) {
+    @if (item) {
+    <div class="mb-14">
+        <section class="relative w-full h-[50vh] md:h-[60vh]">
+            <img [src]="item.hero" class="absolute inset-0 w-full h-full object-cover object-center" [alt]="item.title">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent"></div>
+
+            <div
+                class="relative z-10 flex flex-col justify-center items-center text-center h-full text-white px-6 md:px-20">
+                <p class="italic capitalize">{{ item.description }}</p>
+                <h1 class="uppercase font-serif text-2xl mb-4 md:text-6xl leading-tight">
+                    {{ item.title }}
+                </h1>
+                <h2 class="uppercase text-xs">{{ item.location }}</h2>
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 py-8">
+            <div class="columns-1 sm:columns-2 md:columns-2 gap-2">
+                @for (img of images; track $index) {
+                <div class="mb-2 break-inside-avoid overflow-hidden">
+                    <img [src]="img" alt="{{ item.title }}" class="w-full h-full object-cover">
+                </div>
+                }
+            </div>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6">
+            <h2 class="text-sm font-serif text-center uppercase mb-8">Vendors</h2>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-semibold">Photography</span>
+                    <a href="https://assistant-website.com" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">Celeste Sierra</a>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-semibold">Planning & Design</span>
+                    <a href="https://planner-website.com" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">Elegant Events</a>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-semibold">Venue</span>
+                    <a href="https://venue-website.com" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">Sunset Gardens</a>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-semibold">Florals</span>
+                    <a href="https://vendor-website.com" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">Bloom & Co.</a>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-semibold">Dress Designer</span>
+                    <a href="https://designer-website.com" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">Luxe Bridal</a>
+                </div>
+
+                <div class="flex flex-col items-center text-center">
+                    <span class="font-semibold">Videography</span>
+                    <a href="https://assistant-website.com" target="_blank"
+                        class="text-gray-600 hover:text-gray-900 transition-colors">Alex Johnson</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="flex justify-between items-center max-w-4xl mx-auto mt-12 px-6">
+            <app-buttons (click)="goTo(prevId)" type="button" size="sm" variant="outline" color="neutral">
+                <fa-icon [icon]="faArrowLeft"></fa-icon> Previous
+            </app-buttons>
+            <app-buttons (click)="goTo(nextId)" type="button" size="sm" variant="outline" color="neutral">
+                Next <fa-icon [icon]="faArrowRight"></fa-icon>
+            </app-buttons>
+        </section>
+    </div>
+    }
 }

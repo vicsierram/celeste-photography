@@ -60,7 +60,7 @@ export class ImageService {
       coverUrl: 'assets/clients-2.jpg',
       location: 'Tuscany, Italy',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-1.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
@@ -91,7 +91,7 @@ export class ImageService {
       coverUrl: 'assets/clients-3.jpg',
       location: 'Guadalajara, Jal.',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-2.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
@@ -122,7 +122,7 @@ export class ImageService {
       coverUrl: 'assets/clients-4.jpg',
       location: 'Guadalajara, Jal.',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-3.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
@@ -153,7 +153,7 @@ export class ImageService {
       coverUrl: 'assets/portrait.jpg',
       location: 'Porto, Portugal',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-4.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
@@ -184,7 +184,7 @@ export class ImageService {
       coverUrl: 'assets/details.jpg',
       location: 'Guadalajara, Jal.',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-5.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
@@ -246,7 +246,7 @@ export class ImageService {
       coverUrl: 'assets/detwedd.jpg',
       location: 'Guadalajara, Jal.',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-1.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
@@ -277,7 +277,7 @@ export class ImageService {
       coverUrl: 'assets/welcome.jpg',
       location: 'Guadalajara, Jal.',
       description: 'A beautiful outdoor ceremony surrounded by vineyards',
-      hero: 'assets/detwedd.jpg',
+      hero: 'assets/hor-4.jpg',
       images: [
         'assets/clients-1.jpg',
         'assets/clients-2.jpg',
