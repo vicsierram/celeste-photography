@@ -21,7 +21,7 @@ export class Buttons {
   colorClasses: Record<ButtonColor, string> = {
     primary: 'bg-blue text-white hover:bg-blue/90',
     secondary: 'bg-sand text-blue hover:bg-blue hover:text-white',
-    accent: 'bg-pink text-white hover:bg-pink-mid hover:text-gray-800',
+    accent: 'bg-pink text-white hover:bg-pink-mid',
     neutral: 'bg-cloud text-moonlight hover:bg-blue hover:text-white'
   };
 
