@@ -126,59 +126,56 @@
         </div>
 
         <section id="weddings" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
-            <div class="aspect-[4/5] w-full">
+            <div class="aspect-[4/5] w-full overflow-hidden">
                 <img class="w-full h-full object-cover" src="assets/b&w3.jpg" alt="Wedding photography">
             </div>
 
             <div class="flex flex-col justify-center space-y-6">
                 <h3 class="uppercase text-2xl font-bold">Weddings</h3>
                 <p class="text-base font-serif italic text-gray-800">
-                    The day you've dreamt of, lived fully.
+                    Your day in the best way.
                 </p>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    A wedding day is a whirlwind of emotion — laughter, tears, quiet glances, and unshakable joy.
-                    We like documenting the in-between moments as much as the grand ones.
-                    From the details you've planned to the feelings you couldn't have imagined,
-                    we'll tell your story in the best way possible.
+                <p class="text-sm text-gray-600 leading-relaxed mt-4 max-w-md">
+                    A wedding is a whirlwind of emotion — quiet glances, tears and unshakable joy.
+                    We capture the in-between moments as much as the grand ones, so your story feels alive.
                 </p>
 
-                <div class="border-b border-neutral-200 flex justify-between gap-6">
+                <div class="flex flex-wrap gap-3">
                     @for (plan of weddingPlans; track $index) {
-                    <button (click)="selectedPlan = $index"
-                        class="pb-2 text-sm font-medium transition relative cursor-pointer"
-                        [ngClass]="selectedPlan === $index ? 'text-neutral-900 border-b-2 border-neutral-900' : 'text-gray-500 hover:text-neutral-800'">
+                    <button type="button" (click)="selectedPlan = $index"
+                        [ngClass]="selectedPlan === $index ? 'bg-neutral-900 text-white border-neutral-900' : 'text-gray-600 border border-neutral-300 hover:bg-neutral-100'"
+                        class="px-4 py-1.5 text-sm rounded-full transition cursor-pointer">
                         {{ plan.name }}
                     </button>
                     }
                 </div>
 
-                <div class="space-y-6">
-                    <ul class="space-y-2 text-gray-700">
-                        @for (detail of weddingPlans[selectedPlan].details; track $index) {
-                        <li class="flex gap-2">
-                            <fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon>
-                            <span class="text-sm">{{ detail.value }}</span>
-                        </li>
-                        }
-                    </ul>
+                <ul class="space-y-2 text-gray-700">
+                    @for (detail of weddingPlans[selectedPlan].details; track $index) {
+                    <li class="flex gap-2">
+                        <span class="text-blue-mid font-bold">–</span>
+                        <span class="text-sm">{{ detail.value }}</span>
+                    </li>
+                    }
+                </ul>
 
-                    <div class="text-center space-y-2">
-                        <p class="italic font-semibold text-sm">
-                            Starts at:
-                            <span>{{ weddingPlans[selectedPlan].priceMXN }} ({{ weddingPlans[selectedPlan].priceUSD
-                                }})</span>
-                        </p>
-                        <app-buttons type="button" size="md" variant="outline" color="neutral">
-                            {{ weddingPlans[selectedPlan].CTA }}
-                        </app-buttons>
-                    </div>
+                <div class="bg-neutral-50 p-4 text-center space-y-3">
+                    <p class="italic font-semibold text-sm">
+                        Starts at
+                        <span>{{ weddingPlans[selectedPlan].priceMXN }}</span>
+                        <span> ({{ weddingPlans[selectedPlan].priceUSD }})</span>
+                    </p>
+                    <app-buttons type="button" size="md" variant="outline" color="neutral">
+                        {{ weddingPlans[selectedPlan].CTA }}
+                    </app-buttons>
                 </div>
             </div>
         </section>
 
         <section id="sessions" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
             <div class="aspect-[4/5] w-full">
-                <img class="w-full h-full object-cover" src="assets/coupsect.jpg" alt="Sessions photography">
+                <img class="w-full h-full object-cover overflow-hidden" src="assets/coupsect.jpg"
+                    alt="Sessions photography">
             </div>
 
             <div class="flex flex-col justify-center space-y-6">
@@ -194,20 +191,20 @@
                 </p>
 
                 <ul class="space-y-2 text-gray-700">
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">2 hour coverage</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">2 hour
+                            coverage</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span
                             class="text-sm">Photographer</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">50+ edited photos</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">Online gallery</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">2 weeks delivery</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">50+
+                            edited photos</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">Online
+                            gallery</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">2 weeks
+                            delivery</span></li>
                 </ul>
 
-                <div class="text-center space-y-2">
-                    <p class="italic font-semibold text-sm">Starts at: <span>$6,500 MXN ($360 USD)</span></p>
+                <div class="bg-neutral-50 p-4 text-center space-y-3">
+                    <p class="italic font-semibold text-sm">Starts at <span>$6,500 MXN ($360 USD)</span></p>
                     <app-buttons type="button" size="md" variant="outline" color="neutral">Request to book</app-buttons>
                 </div>
             </div>
@@ -215,7 +212,8 @@
 
         <section id="custom" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div class="aspect-[4/5] w-full">
-                <img class="w-full h-full object-cover" src="assets/custsect.jpg" alt="Custom photography">
+                <img class="w-full h-full object-cover overflow-hidden" src="assets/custsect.jpg"
+                    alt="Custom photography">
             </div>
 
             <div class="flex flex-col justify-center space-y-6">
@@ -231,19 +229,19 @@
                 </p>
 
                 <ul class="space-y-2 text-gray-700">
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">4 hour coverage</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">4 hour
+                            coverage</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span
                             class="text-sm">Photographer</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">50+ edited photos</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">Online gallery</span></li>
-                    <li class="flex gap-2"><fa-icon class="text-sm text-blue-mid" [icon]="faArrow"></fa-icon><span
-                            class="text-sm">2 weeks delivery</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">50+
+                            edited photos</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">Online
+                            gallery</span></li>
+                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">2 weeks
+                            delivery</span></li>
                 </ul>
 
-                <div class="text-center space-y-2">
+                <div class="bg-neutral-50 p-4 text-center space-y-3">
                     <p class="italic font-semibold text-sm">Custom Quote</p>
                     <app-buttons type="button" size="md" variant="outline" color="neutral">Request to book</app-buttons>
                 </div>
