@@ -6,6 +6,8 @@ import { AboutPage } from './features/about/about-page/about-page';
 import { BookingOptions } from './features/booking/booking-options/booking-options';
 import { DetailsPage } from './features/details/details-page/details-page';
 import { ContactPage } from './features/contact/contact-page/contact-page';
+import { ContactSuccess } from './features/contact/contact-success/contact-success';
+import { ErrorPage } from './shared/error-page/error-page';
 
 export const routes: Routes = [
     {
@@ -40,5 +42,13 @@ export const routes: Routes = [
     {
         path: 'contact',
         component: ContactPage
+    },
+    {
+        path: 'contact-success',
+        component: ContactSuccess
+    },
+    {
+        path: '**',
+        component: ErrorPage
     }
 ];

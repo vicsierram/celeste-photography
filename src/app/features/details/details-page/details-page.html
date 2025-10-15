@@ -1,5 +1,5 @@
 <div>
-    <section id="details" class="min-h-screen flex flex-col justify-center px-6 py-16">
+    <section id="details" class="min-h-screen px-6 py-20 flex flex-col justify-center">
         <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
             <h2 class="text-4xl md:text-5xl font-serif mb-6">Everything you need to know</h2>
             <p class="text-sm text-gray-600">
@@ -74,7 +74,7 @@
         </div>
     </section>
 
-    <section id="approach" class="min-h-screen bg-neutral-50 px-6 py-16">
+    <section id="approach" class="px-6 py-20 bg-neutral-50">
         <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
             <h2 class="text-3xl md:text-4xl font-serif mb-6">My Approach</h2>
             <p class="text-sm text-gray-600">
@@ -86,13 +86,13 @@
             <div class="bg-white p-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">01. Understanding Your Story</h3>
                 <p class="text-sm text-gray-600">We'll begin with a call to connect, answer your questions, and get to
-                    know your vision — so your photos reflect your personalities and your love story.</p>
+                    know your vision &#8212; so your photos reflect your personalities and your love story.</p>
             </div>
 
             <div class="bg-white p-6">
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">02. What's Included</h3>
                 <p class="text-sm text-gray-600">I walk you through the packages so you know exactly what to expect. No
-                    surprises — just complete peace of mind.</p>
+                    surprises &#8212; just complete peace of mind.</p>
             </div>
 
             <div class="bg-white p-6">
@@ -111,7 +111,7 @@
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">05. The Wedding Day</h3>
                 <p class="text-sm text-gray-600">When the day arrives, you can be fully present knowing everything is
                     taken care of.
-                    I'll capture everything important to you — with the best tools
+                    I'll capture everything important to you &#8212; with the best tools
                     in the industry so nothing is missed.</p>
             </div>
         </div>
@@ -125,7 +125,7 @@
             </p>
         </div>
 
-        <section id="weddings" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
+        <section id="weddings" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
             <div class="aspect-[4/5] w-full overflow-hidden">
                 <img class="w-full h-full object-cover" src="assets/b&w3.jpg" alt="Wedding photography">
             </div>
@@ -135,8 +135,8 @@
                 <p class="text-base font-serif italic text-gray-800">
                     Your day in the best way.
                 </p>
-                <p class="text-sm text-gray-600 leading-relaxed mt-4 max-w-md">
-                    A wedding is a whirlwind of emotion — quiet glances, tears and unshakable joy.
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    A wedding is a whirlwind of emotion &#8212; quiet glances, tears and unshakable joy.
                     We capture the in-between moments as much as the grand ones, so your story feels alive.
                 </p>
 
@@ -150,29 +150,31 @@
                     }
                 </div>
 
-                <ul class="space-y-2 text-gray-700">
-                    @for (detail of weddingPlans[selectedPlan].details; track $index) {
-                    <li class="flex gap-2">
-                        <span class="text-blue-mid font-bold">–</span>
-                        <span class="text-sm">{{ detail.value }}</span>
-                    </li>
-                    }
-                </ul>
+                <div class="bg-neutral-50 p-4">
+                    <ul class="space-y-2 text-gray-700">
+                        @for (detail of weddingPlans[selectedPlan].details; track $index) {
+                        <li class="flex gap-2">
+                            <!-- <span class="text-blue-mid font-bold">–</span> -->
+                            <span class="text-sm">{{ detail.value }}</span>
+                        </li>
+                        }
+                    </ul>
 
-                <div class="bg-neutral-50 p-4 text-center space-y-3">
-                    <p class="italic font-semibold text-sm">
-                        Starts at
-                        <span>{{ weddingPlans[selectedPlan].priceMXN }}</span>
-                        <span> ({{ weddingPlans[selectedPlan].priceUSD }})</span>
-                    </p>
-                    <app-buttons type="button" size="md" variant="outline" color="neutral">
-                        {{ weddingPlans[selectedPlan].CTA }}
-                    </app-buttons>
+                    <div class="pt-4 text-center space-y-3">
+                        <p class="italic font-semibold text-sm">
+                            Starts at
+                            <span>{{ weddingPlans[selectedPlan].priceMXN }}</span>
+                            <span> ({{ weddingPlans[selectedPlan].priceUSD }})</span>
+                        </p>
+                        <app-buttons type="button" size="md" variant="outline" color="neutral">
+                            {{ weddingPlans[selectedPlan].CTA }}
+                        </app-buttons>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="sessions" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-24">
+        <section id="sessions" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
             <div class="aspect-[4/5] w-full">
                 <img class="w-full h-full object-cover overflow-hidden" src="assets/coupsect.jpg"
                     alt="Sessions photography">
@@ -183,29 +185,43 @@
                 <p class="text-base font-serif italic text-gray-800">
                     Stories worth remembering.
                 </p>
-                <p class="text-sm text-gray-600 leading-relaxed">
+                <p class="text-xs text-gray-600 leading-relaxed">
                     From engagements and anniversaries to portraits that capture your bond, sessions are intimate spaces
                     to pause,
                     connect, and create timeless keepsakes. Perfect for couples, families, or simply celebrating
                     yourself.
                 </p>
 
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">2 hour
-                            coverage</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span
-                            class="text-sm">Photographer</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">50+
-                            edited photos</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">Online
-                            gallery</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">2 weeks
-                            delivery</span></li>
-                </ul>
+                <div class="bg-neutral-50 p-4">
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex gap-2">
+                            <span class="text-sm">2
+                                hour
+                                coverage</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">Photographer</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">50+
+                                edited photos</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">Online
+                                gallery</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">2
+                                weeks
+                                delivery</span>
+                        </li>
+                    </ul>
 
-                <div class="bg-neutral-50 p-4 text-center space-y-3">
-                    <p class="italic font-semibold text-sm">Starts at <span>$6,500 MXN ($360 USD)</span></p>
-                    <app-buttons type="button" size="md" variant="outline" color="neutral">Request to book</app-buttons>
+                    <div class="pt-4 text-center space-y-3">
+                        <p class="italic font-semibold text-sm">Starts at <span>$6,500 MXN ($360 USD)</span></p>
+                        <app-buttons type="button" size="md" variant="outline" color="neutral">Request to
+                            book</app-buttons>
+                    </div>
                 </div>
             </div>
         </section>
@@ -221,35 +237,47 @@
                 <p class="text-base font-serif italic text-gray-800">
                     Up for every occasion.
                 </p>
-                <p class="text-sm text-gray-600 leading-relaxed">
-                    Every story is unique — and some don't fit into a box. Whether it's a destination adventure,
+                <p class="text-xs text-gray-600 leading-relaxed">
+                    Every story is unique &#8212; and some don't fit into a box. Whether it's a destination adventure,
                     a styled editorial, or a celebration that bends tradition, we'll craft coverage tailored to your
                     ideas.
                     Together, we'll design something as personal as the memories you want to keep.
                 </p>
 
-                <ul class="space-y-2 text-gray-700">
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">4 hour
-                            coverage</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span
-                            class="text-sm">Photographer</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">50+
-                            edited photos</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">Online
-                            gallery</span></li>
-                    <li class="flex gap-2"><span class="text-blue-mid font-bold">-</span><span class="text-sm">2 weeks
-                            delivery</span></li>
-                </ul>
+                <div class="bg-neutral-50 p-4">
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex gap-2">
+                            <span class="text-sm">4 hour
+                                coverage</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">Photographer</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">50+
+                                edited photos</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">Online
+                                gallery</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-sm">2 weeks
+                                delivery</span>
+                        </li>
+                    </ul>
 
-                <div class="bg-neutral-50 p-4 text-center space-y-3">
-                    <p class="italic font-semibold text-sm">Custom Quote</p>
-                    <app-buttons type="button" size="md" variant="outline" color="neutral">Request to book</app-buttons>
+                    <div class="pt-4 text-center space-y-3">
+                        <p class="italic font-semibold text-sm">Custom Quote</p>
+                        <app-buttons type="button" size="md" variant="outline" color="neutral">Request to
+                            book</app-buttons>
+                    </div>
                 </div>
             </div>
         </section>
     </section>
 
-    <section id="faqs" class="min-h-screen bg-white text-neutral-900 px-6 py-20">
+    <section id="faqs" class="px-6 py-20 bg-white text-neutral-900 ">
         <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
             <h2 class="text-3xl md:text-4xl font-serif mb-6">Frequently Asked Questions</h2>
             <p class="text-sm text-gray-600">

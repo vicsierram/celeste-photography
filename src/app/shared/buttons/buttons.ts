@@ -16,7 +16,7 @@ export class Buttons {
   @Input() size: ButtonSize = 'md';
   @Input() state: ButtonState = 'default';
 
-  baseClasses = 'inline-flex items-center justify-center font-sans tracking-wide rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
+  baseClasses = 'inline-flex items-center justify-center font-sans tracking-wide rounded-full transition-colors duration-300 focus:outline-none';
 
   colorClasses: Record<ButtonColor, string> = {
     primary: 'bg-blue text-white hover:bg-blue/90',

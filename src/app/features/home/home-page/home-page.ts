@@ -50,17 +50,17 @@ export class HomePage {
   serviceType: ServiceCard[] = [
     {
       title: 'Weddings',
-      image: 'assets/couple.jpg',
+      image: 'assets/b&w1.jpg',
       link: '/portfolio/weddings'
     },
     {
-      title: 'Engagements',
-      image: 'assets/portrait.jpg',
+      title: 'Sessions',
+      image: 'assets/clients-4.jpg',
       link: '/portfolio/engagements'
     },
     {
-      title: 'Photoshoots',
-      image: 'assets/details.jpg',
+      title: 'Custom',
+      image: 'assets/custsect.jpg',
       link: '/portfolio/photoshoots'
     }
   ]
