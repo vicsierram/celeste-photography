@@ -1,5 +1,5 @@
 export const environment = {
-    production: true,
+    production: false,
     emailJs: {
         serviceId: 'service_uhi7349',
         templateId: 'template_i59bawd',

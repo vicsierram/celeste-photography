@@ -3,7 +3,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms'
 import { RouterModule, Router } from '@angular/router';
 
 import { ErrorType } from '../../../shared/models/error-type.enum.ts';
-import { environment } from '../../../../environments/environment.development';
+import { environment } from '../../../../environments/environment.js';
 import emailJs from '@emailjs/browser'
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
