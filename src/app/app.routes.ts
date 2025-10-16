@@ -8,6 +8,9 @@ import { DetailsPage } from './features/details/details-page/details-page';
 import { ContactPage } from './features/contact/contact-page/contact-page';
 import { ContactSuccess } from './features/contact/contact-success/contact-success';
 import { ErrorPage } from './shared/error-page/error-page';
+import { DetailsApproach } from './features/details/details-approach/details-approach';
+import { DetailsServices } from './features/details/details-services/details-services';
+import { DetailsFaqs } from './features/details/details-faqs/details-faqs';
 
 export const routes: Routes = [
     {
@@ -32,12 +35,20 @@ export const routes: Routes = [
         component: AboutPage
     },
     {
-        path: 'booking',
-        component: BookingOptions
-    },
-    {
         path: 'details',
         component: DetailsPage
+    },
+    {
+        path: 'details/approach',
+        component: DetailsApproach
+    },
+    {
+        path: 'details/services',
+        component: DetailsServices
+    },
+    {
+        path: 'details/faqs',
+        component: DetailsFaqs
     },
     {
         path: 'contact',
@@ -51,4 +62,8 @@ export const routes: Routes = [
         path: '**',
         component: ErrorPage
     }
+    // {
+    //     path: 'booking',
+    //     component: BookingOptions
+    // },
 ];

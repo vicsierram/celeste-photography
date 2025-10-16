@@ -1,303 +1,74 @@
-<div>
-    <section id="details" class="min-h-screen px-6 py-20 flex flex-col justify-center">
-        <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
-            <h2 class="text-4xl md:text-5xl font-serif mb-6">Everything you need to know</h2>
-            <p class="text-sm text-gray-600">
-                From the moment you book your appointment to the delivery of your photos, we structure every step so
-                you can experience your moment to the fullest.
-            </p>
-        </div>
+<section id="details" class="min-h-screen bg-neutral-100 px-6 py-20 flex flex-col justify-center">
+    <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif mb-6">Everything you need to know</h2>
+        <p class="text-sm text-gray-600">
+            From the moment you book your appointment to the delivery of your photos, we structure every step so
+            you can experience your moment to the fullest.
+        </p>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
-            <div [routerLink]="['./']" [fragment]="'approach'"
-                class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-200 shadow-md cursor-pointer group overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
+        <div routerLink="/details/approach"
+            class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-200 shadow-md cursor-pointer group overflow-hidden">
 
-                <div
-                    class="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center bg-white/40 backdrop-blur-md group-hover:scale-110 transition-transform duration-300 z-10">
-                    <fa-icon [icon]="faMethod" class="text-base text-cloud"></fa-icon>
-                </div>
-
-                <img src="assets/b&w1.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
-
-                <div class="relative z-10">
-                    <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900 block">
-                        My method
-                    </span>
-                    <span class="flex justify-between items-center text-gray-600">
-                        Go to Section
-                        <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
-                    </span>
-                </div>
+            <div
+                class="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center bg-white/40 backdrop-blur-md group-hover:scale-110 transition-transform duration-300 z-10">
+                <fa-icon [icon]="faMethod" class="text-base text-cloud"></fa-icon>
             </div>
 
-            <div [routerLink]="['./']" [fragment]="'services'"
-                class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-200 shadow-md cursor-pointer group overflow-hidden">
+            <img src="assets/b&w1.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
 
-                <div
-                    class="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center bg-white/40 backdrop-blur-md group-hover:scale-110 transition-transform duration-300 z-10">
-                    <fa-icon [icon]="faServices" class="text-base text-cloud"></fa-icon>
-                </div>
-
-                <img src="assets/b&w2.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
-
-                <div class="relative z-10">
-                    <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900 block">
-                        Services & Pricing
-                    </span>
-                    <span class="flex justify-between items-center text-gray-600">
-                        Go to Section
-                        <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
-                    </span>
-                </div>
-            </div>
-
-            <div [routerLink]="['./']" [fragment]="'faqs'"
-                class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-200 shadow-md cursor-pointer group overflow-hidden">
-
-                <div
-                    class="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center bg-white/40 backdrop-blur-md group-hover:scale-110 transition-transform duration-300 z-10">
-                    <fa-icon [icon]="faFaqs" class="text-base text-cloud"></fa-icon>
-                </div>
-
-                <img src="assets/b&w4.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
-
-                <div class="relative z-10">
-                    <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900 block">
-                        Questions
-                    </span>
-                    <span class="flex justify-between items-center text-gray-600">
-                        Go to Section
-                        <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
-                    </span>
-                </div>
+            <div class="relative z-10">
+                <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900 block">
+                    My method
+                </span>
+                <span class="flex justify-between items-center text-gray-600">
+                    Go to Section
+                    <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
+                </span>
             </div>
         </div>
-    </section>
 
-    <section id="approach" class="px-6 py-20 bg-neutral-50">
-        <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif mb-6">My Approach</h2>
-            <p class="text-sm text-gray-600">
-                From our first conversation to your final gallery.
-            </p>
-        </div>
+        <div routerLink="/details/services"
+            class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-200 shadow-md cursor-pointer group overflow-hidden">
 
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">01. Understanding Your Story</h3>
-                <p class="text-sm text-gray-600">We'll begin with a call to connect, answer your questions, and get to
-                    know your vision &#8212; so your photos reflect your personalities and your love story.</p>
+            <div
+                class="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center bg-white/40 backdrop-blur-md group-hover:scale-110 transition-transform duration-300 z-10">
+                <fa-icon [icon]="faServices" class="text-base text-cloud"></fa-icon>
             </div>
 
-            <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">02. What's Included</h3>
-                <p class="text-sm text-gray-600">I walk you through the packages so you know exactly what to expect. No
-                    surprises &#8212; just complete peace of mind.</p>
-            </div>
+            <img src="assets/b&w2.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
 
-            <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">03. Breaking the Ice</h3>
-                <p class="text-sm text-gray-600">A complimentary session to break the ice and help you feel
-                    comfortable and natural in front of the lens.</p>
-            </div>
-
-            <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">04. Editorial + Candid Style</h3>
-                <p class="text-sm text-gray-600">A balanced mix of timeless editorial portraits and genuine candid
-                    moments that capture how it truly felt.</p>
-            </div>
-
-            <div class="bg-white p-6 md:col-span-2">
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">05. The Wedding Day</h3>
-                <p class="text-sm text-gray-600">When the day arrives, you can be fully present knowing everything is
-                    taken care of.
-                    I'll capture everything important to you &#8212; with the best tools
-                    in the industry so nothing is missed.</p>
+            <div class="relative z-10">
+                <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900 block">
+                    Services & Pricing
+                </span>
+                <span class="flex justify-between items-center text-gray-600">
+                    Go to Section
+                    <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
+                </span>
             </div>
         </div>
-    </section>
 
-    <section id="services" class="px-6 py-20 bg-white">
-        <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif mb-6">Our Services</h2>
-            <p class="text-sm text-gray-600">
-                Curated experiences designed to capture your most meaningful moments.
-            </p>
+        <div routerLink="/details/faqs"
+            class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-200 shadow-md cursor-pointer group overflow-hidden">
+
+            <div
+                class="absolute top-4 right-4 h-10 w-10 rounded-full flex items-center justify-center bg-white/40 backdrop-blur-md group-hover:scale-110 transition-transform duration-300 z-10">
+                <fa-icon [icon]="faFaqs" class="text-base text-cloud"></fa-icon>
+            </div>
+
+            <img src="assets/b&w4.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="relative z-10">
+                <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900 block">
+                    Questions
+                </span>
+                <span class="flex justify-between items-center text-gray-600">
+                    Go to Section
+                    <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
+                </span>
+            </div>
         </div>
-
-        <section id="weddings" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
-            <div class="aspect-[4/5] w-full overflow-hidden">
-                <img class="w-full h-full object-cover" src="assets/b&w3.jpg" alt="Wedding photography">
-            </div>
-
-            <div class="flex flex-col justify-center space-y-6">
-                <h3 class="uppercase text-2xl font-bold">Weddings</h3>
-                <p class="text-base font-serif italic text-gray-800">
-                    Your day in the best way.
-                </p>
-                <p class="text-xs text-gray-600 leading-relaxed">
-                    A wedding is a whirlwind of emotion &#8212; quiet glances, tears and unshakable joy.
-                    We capture the in-between moments as much as the grand ones, so your story feels alive.
-                </p>
-
-                <div class="flex flex-wrap gap-3">
-                    @for (plan of weddingPlans; track $index) {
-                    <button type="button" (click)="selectedPlan = $index"
-                        [ngClass]="selectedPlan === $index ? 'bg-neutral-900 text-white border-neutral-900' : 'text-gray-600 border border-neutral-300 hover:bg-neutral-100'"
-                        class="px-4 py-1.5 text-sm rounded-full transition cursor-pointer">
-                        {{ plan.name }}
-                    </button>
-                    }
-                </div>
-
-                <div class="bg-neutral-50 p-4">
-                    <ul class="space-y-2 text-gray-700">
-                        @for (detail of weddingPlans[selectedPlan].details; track $index) {
-                        <li class="flex gap-2">
-                            <!-- <span class="text-blue-mid font-bold">–</span> -->
-                            <span class="text-sm">{{ detail.value }}</span>
-                        </li>
-                        }
-                    </ul>
-
-                    <div class="pt-4 text-center space-y-3">
-                        <p class="italic font-semibold text-sm">
-                            Starts at
-                            <span>{{ weddingPlans[selectedPlan].priceMXN }}</span>
-                            <span> ({{ weddingPlans[selectedPlan].priceUSD }})</span>
-                        </p>
-                        <app-buttons type="button" size="md" variant="outline" color="neutral">
-                            {{ weddingPlans[selectedPlan].CTA }}
-                        </app-buttons>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sessions" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
-            <div class="aspect-[4/5] w-full">
-                <img class="w-full h-full object-cover overflow-hidden" src="assets/coupsect.jpg"
-                    alt="Sessions photography">
-            </div>
-
-            <div class="flex flex-col justify-center space-y-6">
-                <h3 class="uppercase text-2xl font-bold">Sessions</h3>
-                <p class="text-base font-serif italic text-gray-800">
-                    Stories worth remembering.
-                </p>
-                <p class="text-xs text-gray-600 leading-relaxed">
-                    From engagements and anniversaries to portraits that capture your bond, sessions are intimate spaces
-                    to pause,
-                    connect, and create timeless keepsakes. Perfect for couples, families, or simply celebrating
-                    yourself.
-                </p>
-
-                <div class="bg-neutral-50 p-4">
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex gap-2">
-                            <span class="text-sm">2
-                                hour
-                                coverage</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">Photographer</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">50+
-                                edited photos</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">Online
-                                gallery</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">2
-                                weeks
-                                delivery</span>
-                        </li>
-                    </ul>
-
-                    <div class="pt-4 text-center space-y-3">
-                        <p class="italic font-semibold text-sm">Starts at <span>$6,500 MXN ($360 USD)</span></p>
-                        <app-buttons type="button" size="md" variant="outline" color="neutral">Request to
-                            book</app-buttons>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="custom" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <div class="aspect-[4/5] w-full">
-                <img class="w-full h-full object-cover overflow-hidden" src="assets/custsect.jpg"
-                    alt="Custom photography">
-            </div>
-
-            <div class="flex flex-col justify-center space-y-6">
-                <h3 class="uppercase text-2xl font-bold">Custom</h3>
-                <p class="text-base font-serif italic text-gray-800">
-                    Up for every occasion.
-                </p>
-                <p class="text-xs text-gray-600 leading-relaxed">
-                    Every story is unique &#8212; and some don't fit into a box. Whether it's a destination adventure,
-                    a styled editorial, or a celebration that bends tradition, we'll craft coverage tailored to your
-                    ideas.
-                    Together, we'll design something as personal as the memories you want to keep.
-                </p>
-
-                <div class="bg-neutral-50 p-4">
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex gap-2">
-                            <span class="text-sm">4 hour
-                                coverage</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">Photographer</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">50+
-                                edited photos</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">Online
-                                gallery</span>
-                        </li>
-                        <li class="flex gap-2">
-                            <span class="text-sm">2 weeks
-                                delivery</span>
-                        </li>
-                    </ul>
-
-                    <div class="pt-4 text-center space-y-3">
-                        <p class="italic font-semibold text-sm">Custom Quote</p>
-                        <app-buttons type="button" size="md" variant="outline" color="neutral">Request to
-                            book</app-buttons>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-    <section id="faqs" class="px-6 py-20 bg-white text-neutral-900 ">
-        <div class="max-w-5xl mx-auto text-center mb-8 md:mb-16">
-            <h2 class="text-3xl md:text-4xl font-serif mb-6">Frequently Asked Questions</h2>
-            <p class="text-sm text-gray-600">
-                Here are some of the most commonly asked questions from our clients. <br>
-                Can't find what you're looking for? <a class="underline underline-offset-4" routerLink="/contact">Get in
-                    contact!</a>
-            </p>
-        </div>
-
-        <div class="max-w-6xl mx-auto mb-16">
-            <mat-accordion>
-                @for (faq of faqs; track $index) {
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title> {{ faq.question }} </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <p> {{ faq.answer }} </p>
-                </mat-expansion-panel>
-                }
-            </mat-accordion>
-        </div>
-    </section>
-</div>
+    </div>
+</section>

@@ -1,0 +1,180 @@
+<section id="services" class= "max-w-6xl mx-auto px-6 py-20 bg-white">
+    <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif mb-6">Our Services</h2>
+        <p class="text-sm text-gray-600">
+            Curated experiences designed to capture your most meaningful moments.
+        </p>
+    </div>
+
+    <section id="weddings" class="grid md:grid-cols-2 gap-12 items-center mb-20">
+        <div class="aspect-[4/5] w-full overflow-hidden">
+            <img class="w-full h-full object-cover" src="assets/b&w3.jpg" alt="Wedding photography">
+        </div>
+
+        <div class="flex flex-col justify-center space-y-6">
+            <div>
+                <h3 class="uppercase text-2xl font-serif font-bold">Weddings</h3>
+                <p class="text-base font-serif italic text-gray-800">
+                    Your day in the best way.
+                </p>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                A wedding is a whirlwind of emotion &#8212; quiet glances, tears and unshakable joy.
+                We capture the in-between moments as much as the grand ones, so your story feels alive.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+                @for (plan of weddingPlans; track $index) {
+                <button type="button" (click)="selectedPlan = $index"
+                    [ngClass]="selectedPlan === $index ? 'bg-neutral-900 text-white border-neutral-900' : 'text-gray-600 border border-neutral-300 hover:bg-neutral-100'"
+                    class="px-4 py-1.5 text-sm rounded-full transition cursor-pointer">
+                    {{ plan.name }}
+                </button>
+                }
+            </div>
+
+            <div class="bg-neutral-50 p-4">
+                <ul class="space-y-2 text-gray-700">
+                    @for (detail of weddingPlans[selectedPlan].details; track $index) {
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">{{ detail.value }}</span>
+                    </li>
+                    }
+                </ul>
+
+                <div class="pt-4 text-center space-y-3">
+                    <p class="italic font-semibold text-sm">
+                        Starts at
+                        <span>{{ weddingPlans[selectedPlan].priceMXN }}</span>
+                        <span> ({{ weddingPlans[selectedPlan].priceUSD }})</span>
+                    </p>
+                    <app-buttons type="button" size="md" variant="outline" color="neutral">
+                        {{ weddingPlans[selectedPlan].CTA }}
+                    </app-buttons>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sessions" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-20">
+        <div class="aspect-[4/5] w-full">
+            <img class="w-full h-full object-cover overflow-hidden" src="assets/coupsect.jpg"
+                alt="Sessions photography">
+        </div>
+
+        <div class="flex flex-col justify-center space-y-6">
+            <div>
+                <h3 class="uppercase text-2xl font-serif font-bold">Sessions</h3>
+                <p class="text-base font-serif italic text-gray-800">
+                    Stories worth remembering.
+                </p>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                From engagements and anniversaries to portraits that capture your bond, sessions are intimate spaces
+                to pause,
+                connect, and create timeless keepsakes. Perfect for couples, families, or simply celebrating
+                yourself.
+            </p>
+
+            <div class="bg-neutral-50 p-4">
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">2
+                            hour
+                            coverage</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">Photographer</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">50+
+                            edited photos</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">Online
+                            gallery</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">2
+                            weeks
+                            delivery</span>
+                    </li>
+                </ul>
+
+                <div class="pt-4 text-center space-y-3">
+                    <p class="italic font-semibold text-sm">Starts at <span>$6,500 MXN ($360 USD)</span></p>
+                    <app-buttons routerLink="/contact" type="button" size="md" variant="outline" color="neutral">Request to
+                        book</app-buttons>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="custom" class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div class="aspect-[4/5] w-full">
+            <img class="w-full h-full object-cover overflow-hidden" src="assets/custsect.jpg" alt="Custom photography">
+        </div>
+
+        <div class="flex flex-col justify-center space-y-6">
+            <div>
+                <h3 class="uppercase text-2xl font-serif font-bold">Custom</h3>
+                <p class="text-base font-serif italic text-gray-800">
+                    Up for every occasion.
+                </p>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                Every story is unique &#8212; and some don't fit into a box. Whether it's a destination adventure,
+                a styled editorial, or a celebration that bends tradition, we'll craft coverage tailored to your
+                ideas.
+                Together, we'll design something as personal as the memories you want to keep.
+            </p>
+
+            <div class="bg-neutral-50 p-4">
+                <ul class="space-y-2 text-gray-700">
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">4 hour
+                            coverage</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">Photographer</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">50+
+                            edited photos</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">Online
+                            gallery</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <fa-icon [icon]="faCheck"></fa-icon>
+                        <span class="text-sm">2 weeks
+                            delivery</span>
+                    </li>
+                </ul>
+
+                <div class="pt-4 text-center space-y-3">
+                    <p class="italic font-semibold text-sm">Custom Quote</p>
+                    <app-buttons routerLink="/contact" type="button" size="md" variant="outline" color="neutral">Request to book</app-buttons>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center mx-auto mt-16">
+        <app-buttons routerLink="/details" type="button" variant="outline" color="neutral" size="md">
+            Go to Details
+            <fa-icon [icon]="faArrow"></fa-icon>
+        </app-buttons>
+    </div>
+</section>

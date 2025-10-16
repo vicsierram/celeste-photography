@@ -1,13 +1,5 @@
-export interface ServiceCard {
+export interface ServicesCard {
   title: string;
   image: string;
-  link: string;
-}
-
-export interface PackageCard {
-  title: string;
-  image: string;
-  link: string;
-  gradientFrom: string;
-  gradientVia: string;
+  path: string;
 }

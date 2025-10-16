@@ -1,0 +1,31 @@
+<section id="faqs" class="max-w-5xl mx-auto px-6 py-20 bg-white text-neutral-900 ">
+    <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif mb-6">Frequently Asked Questions</h2>
+        <p class="text-sm text-gray-600">
+            Here are some of the most commonly asked questions from our clients. <br>
+            Can't find what you're looking for? <a class="underline underline-offset-4 cursor-pointer"
+                routerLink="/contact">Get in
+                contact!</a>
+        </p>
+    </div>
+
+    <div class="mb-16">
+        <mat-accordion>
+            @for (faq of faqs; track $index) {
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title> {{ faq.question }} </mat-panel-title>
+                </mat-expansion-panel-header>
+                <p> {{ faq.answer }} </p>
+            </mat-expansion-panel>
+            }
+        </mat-accordion>
+    </div>
+
+    <div class="text-center mx-auto my-8">
+        <app-buttons routerLink="/details" type="button" variant="outline" color="neutral" size="md">
+            Go to Details
+            <fa-icon [icon]="faArrow"></fa-icon>
+        </app-buttons>
+    </div>
+</section>

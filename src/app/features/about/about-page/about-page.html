@@ -1,23 +1,28 @@
-<div>
-    <section class="min-h-screen w-full grid grid-cols-1 md:grid-cols-2">
-        <div class="flex flex-col justify-center px-6 py-6  md:px-12 lg:px-24 bg-neutral-50 text-left">
-            <h2
-                class="font-serif text-gray-900 text-4xl md:text-5xl lg:text-6xl font-light leading-tight tracking-tight">
+<section class="min-h-screen w-full grid grid-cols-1 md:grid-cols-2">
+    <div class="flex flex-col justify-center px-6 py-6 md:px-12 lg:px-24 bg-neutral-50 text-left">
+        <div class="max-w-6xl mx-auto">
+
+            <h2 class="font-serif text-gray-900 text-4xl md:text-5xl font-light leading-tight tracking-tight">
                 Based in Guadalajara, Mexico &#8212; capturing memories worldwide.
             </h2>
-            <p class="mt-6 text-sm md:text-base text-neutral-600 leading-relaxed max-w-md">
-                With over six years of experience, I've had the privilege of documenting love stories from the vibrant
+            <p class="mt-6 text-sm text-neutral-600 leading-relaxed max-w-md">
+                With over six years of experience, I've had the privilege of documenting love stories from the
+                vibrant
                 towns of México to the cobblestone streets of Italy and Greece, and the breathtaking landscapes of
                 Switzerland and Turkey.
             </p>
-            <p class="mt-6 text-sm md:text-base text-neutral-600 leading-relaxed max-w-md">
-                Naturally social, I create a comfortable space where every couple feels at ease &#8212; whether you're
-                outgoing, reserved, or anywhere in between. From our first conversation to your wedding day, whether in
-                your hometown or a destination wedding abroad, I blend in seamlessly with guests to capture authentic,
+            <p class="mt-6 text-sm text-neutral-600 leading-relaxed max-w-md">
+                Naturally social, I create a comfortable space where every couple feels at ease &#8212; whether
+                you're
+                outgoing, reserved, or anywhere in between. From our first conversation to your wedding day, whether
+                in
+                your hometown or a destination wedding abroad, I blend in seamlessly with guests to capture
+                authentic,
                 candid moments.
             </p>
-            <p class="mt-6 text-sm md:text-base text-neutral-600 leading-relaxed max-w-md">
-                My goal is simple: to preserve your story with artistry, skill, and soul &#8212; creating timeless memories
+            <p class="mt-6 text-sm text-neutral-600 leading-relaxed max-w-md">
+                My goal is simple: to preserve your story with artistry, skill, and soul &#8212; creating timeless
+                memories
                 you'll cherish for a lifetime.
             </p>
             <div>
@@ -25,48 +30,53 @@
                     <a href="" class="hover:underline">Instagram</a>
                     <a href="" class="hover:underline">Pinterest</a>
                 </div>
-                <app-buttons routerLink="/portfolio" type="button" size="sm" variant="outline" color="neutral">
+                <app-buttons routerLink="/portfolio" type="button" size="md" variant="outline" color="neutral">
                     View Portfolio <fa-icon [icon]="faArrow"></fa-icon>
                 </app-buttons>
             </div>
         </div>
-        <div class="h-full flex justify-center items-center bg-neutral-100">
-            <img class="h-full w-2/3 md:w-3/4 object-contain drop-shadow-lg" src="assets/celeste-3.jpeg" alt="Celeste">
-        </div>
-    </section>
+    </div>
+    <div class="h-full">
+        <img class="h-full object-cover object-center" src="assets/celeste-3.jpeg" alt="Celeste">
+    </div>
+</section>
 
-    <section class="min-h-screen w-full bg-neutral-100 grid grid-cols-1 md:grid-cols-2">
-        <div class="grid grid-cols-3 gap-2 p-4">
-            <img class="object-cover object-center aspect-square" src="assets/arch-1.jpg" alt="">
-            <img class="object-cover object-center aspect-square col-span-2 row-span-2" src="assets/arch-2.jpg" alt="">
-            <img class="object-cover object-center aspect-square" src="assets/arch-3.jpg" alt="">
-            <img class="object-cover object-center aspect-square" src="assets/arch-1.jpg" alt="">
-            <img class="object-cover object-center aspect-square" src="assets/arch-3.jpg" alt="">
-        </div>
-        <div class="flex flex-col justify-center px-6 md:px-12 lg:px-24 py-6">
-            <h2 class="text-4xl md:text-5xl font-light uppercase tracking-tight">With a Bachelor's degree in
-                <i>Architecture</i> and a specialization in <b class="font-thin">Photography</b>
-            </h2>
-            <p class="mt-6 text-base text-neutral-700 leading-relaxed">
-                My work lives at the intersection of design and emotion&#8212;creating imagery that is both refined and
-                deeply
-                resonant.
-            </p>
-        </div>
-    </section>
+<section class="min-h-screen w-full bg-neutral-100 grid grid-cols-1 md:grid-cols-2">
+    <div class="grid grid-cols-3 gap-2 p-4">
+        <img class="object-cover object-center aspect-square" src="assets/about-career1.jpg" alt="">
+        <img class="object-cover object-center aspect-square" src="assets/about-career3.jpg" alt="">
+        <img class="object-cover object-center aspect-square col-span-2 row-span-2" src="assets/about-career5.jpg"
+            alt="">
+        <img class="object-cover object-center aspect-square" src="assets/about-career6.jpg" alt="">
+        <img class="object-cover object-center aspect-square" src="assets/about-career4.jpg" alt="">
+        <img class="object-cover object-center aspect-square" src="assets/about-career2.jpg" alt="">
+    </div>
+    <div class="max-w-6xl mx-auto flex flex-col justify-center px-6 lg:px-24 py-6">
+        <h2 class="text-4xl md:text-5xl font-light uppercase tracking-tight">With a Bachelor's degree in
+            <i>Architecture</i> and a specialization in <b class="font-thin">Photography</b>
+        </h2>
+        <p class="mt-6 text-base text-neutral-700 leading-relaxed">
+            My work lives at the intersection of design and emotion&#8212;creating imagery that is both refined and
+            deeply
+            resonant.
+        </p>
+    </div>
+</section>
 
-    <section id="portfolio" class="min-h-screen flex flex-col justify-center bg-neutral-900 text-white px-6 py-16">
-        <div class="max-w-5xl mx-auto text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-serif mb-6">Portfolio</h2>
-            <p class="text-sm md:text-base max-w-2xl mx-auto">
-                A curated collection of timeless weddings, fashion editorials, and personal stories.
-                Each frame tells a story of love, light, and emotion.
-            </p>
-        </div>
+<section id="portfolio" class="min-h-screen flex flex-col justify-center bg-neutral-900 text-white px-6 py-16">
+    <div class="max-w-5xl mx-auto text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-serif mb-6">Portfolio</h2>
+        <p class="text-sm md:text-base max-w-2xl mx-auto">
+            A curated collection of timeless weddings, fashion editorials, and personal stories.
+            Each frame tells a story of love, light, and emotion.
+        </p>
+    </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
-            <div routerLink="/portfolio/weddings"
-                class="h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-300 transition shadow-md cursor-pointer group">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4 max-w-6xl mx-auto">
+        <div routerLink="/portfolio/weddings"
+            class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-300 transition shadow-md cursor-pointer group">
+            <img src="assets/b&w4.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
+            <div class="z-10">
                 <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900">
                     Weddings
                 </span>
@@ -75,22 +85,14 @@
                     <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
                 </span>
             </div>
+        </div>
 
-            <div routerLink="/portfolio/engagements"
-                class="h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-300 transition shadow-md cursor-pointer group">
+        <div routerLink="/portfolio/engagements"
+            class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-300 transition shadow-md cursor-pointer group">
+            <img src="assets/b&w2.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
+            <div class="z-10">
                 <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900">
-                    Engagements
-                </span>
-                <span class="flex justify-between items-center text-gray-600">
-                    View Collection
-                    <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
-                </span>
-            </div>
-
-            <div routerLink="/portfolio/photoshoots"
-                class="h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-300 transition shadow-md cursor-pointer group">
-                <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900">
-                    Photoshoots
+                    Sessions
                 </span>
                 <span class="flex justify-between items-center text-gray-600">
                     View Collection
@@ -99,44 +101,61 @@
             </div>
         </div>
 
-        <app-buttons class="mx-auto mt-12 inline-block" routerLink="/portfolio" type="button" size="md" variant="solid"
-            color="neutral">
-            View Full Portfolio
-        </app-buttons>
-    </section>
+        <div routerLink="/portfolio/photoshoots"
+            class="relative h-46 md:h-58 p-6 aspect-square flex flex-col justify-end bg-neutral-100 hover:bg-neutral-300 transition shadow-md cursor-pointer group">
+            <img src="assets/b&w1.jpg" alt="My method button" class="absolute inset-0 w-full h-full object-cover">
 
-    <section id="services" class="min-h-screen flex flex-col justify-center px-6 bg-gray-50">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-serif mb-8">Services</h2>
-            <p class="text-base text-gray-700 leading-relaxed max-w-2xl mx-auto mb-12">
-                From intimate weddings to editorial shoots, every service is crafted to reflect your story with elegance
-                and artistry.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div>
-                    <h3 class="text-2xl font-serif mb-2">Weddings</h3>
-                    <p class="text-gray-600">Documenting your day with timeless, editorial imagery.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-serif mb-2">Editorials</h3>
-                    <p class="text-gray-600">Luxury styled shoots with an artistic eye.</p>
-                </div>
-                <div>
-                    <h3 class="text-2xl font-serif mb-2">Portraits</h3>
-                    <p class="text-gray-600">Intimate, elegant sessions tailored to you.</p>
-                </div>
+            <div class="z-10">
+                <span class="text-lg font-serif tracking-wide text-gray-800 group-hover:text-gray-900">
+                    Custom
+                </span>
+                <span class="flex justify-between items-center text-gray-600">
+                    View Collection
+                    <fa-icon class="text-gray-600" [icon]="faArrow"></fa-icon>
+                </span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section id="contact" class="min-h-screen flex flex-col justify-center px-6 bg-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-serif mb-6">Let's Create Together</h2>
-            <p class="text-lg text-gray-600 mb-10">
-                Ready to begin your story? Reach out for availability and bookings.
-            </p>
-            <app-buttons routerLink="/contact" type="button" size="lg" variant="outline" color="neutral">Get in
-                Touch</app-buttons>
+    <app-buttons class="mx-auto mt-12 inline-block" routerLink="/portfolio" type="button" size="md" variant="solid"
+        color="secondary">
+        View Full Portfolio
+    </app-buttons>
+</section>
+
+<section id="services" class="min-h-screen flex flex-col justify-center px-6 bg-gray-50">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-serif mb-8">Services</h2>
+        <p class="text-base text-gray-700 leading-relaxed max-w-2xl mx-auto mb-12">
+            From intimate weddings to editorial shoots, every service is crafted to reflect your story with elegance
+            and artistry.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-2xl font-serif mb-2">Weddings</h3>
+                <p class="text-gray-600">Documenting your day with timeless, editorial imagery.</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-serif mb-2">Sessions</h3>
+                <p class="text-gray-600">Luxury styled shoots with an artistic eye.</p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-serif mb-2">Custom</h3>
+                <p class="text-gray-600">Everything tailored to you.</p>
+            </div>
         </div>
-    </section>
-</div>
+        <app-buttons class="mx-auto mt-12 inline-block" routerLink="/details/services" type="button" variant="outline" color="neutral" size="md">Explore
+            Our Services</app-buttons>
+    </div>
+</section>
+
+<section id="contact" class="min-h-screen flex flex-col justify-center px-6 bg-white">
+    <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-serif mb-6">Let's Create Together</h2>
+        <p class="text-lg text-gray-600 mb-10">
+            Ready to begin your story? Reach out for availability and bookings.
+        </p>
+        <app-buttons routerLink="/contact" type="button" size="lg" variant="outline" color="neutral">Get in
+            Touch</app-buttons>
+    </div>
+</section>

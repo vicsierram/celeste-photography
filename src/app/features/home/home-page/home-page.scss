@@ -14,6 +14,21 @@
     animation: fade-in 1.2s ease-out;
 }
 
+@keyframes fade-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-slide-up {
+    animation: fade-slide-up 1.2s ease-out both;
+}
 
 .booking {
     .calendar-text-font {

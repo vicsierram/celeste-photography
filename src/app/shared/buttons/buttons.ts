@@ -22,7 +22,7 @@ export class Buttons {
     primary: 'bg-blue text-white hover:bg-blue/90',
     secondary: 'bg-sand text-blue hover:bg-blue hover:text-white',
     accent: 'bg-pink text-white hover:bg-pink-mid',
-    neutral: 'bg-cloud text-moonlight hover:bg-blue hover:text-white'
+    neutral: 'bg-cloud text-moonlight hover:bg-gray-900 hover:text-white'
   };
 
   variantClasses: Record<ButtonVariant, string> = {

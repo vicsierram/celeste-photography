@@ -1,6 +1,6 @@
-import { Component, model } from '@angular/core';
+import { Component, inject, model } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { provideNativeDateAdapter } from '@angular/material/core';
@@ -12,7 +12,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart, faQuoteLeft, faTruckFast, faPenToSquare, faHeadset, faArrowRight, faClock, faImagePortrait, faImages, faEarthAmericas } from '@fortawesome/free-solid-svg-icons';
 
-import { ServiceCard, PackageCard } from './home-page-model';
+import { ServicesCard } from './home-page-model';
 import { Buttons } from '../../../shared/buttons/buttons';
 
 @Component({
@@ -33,6 +33,7 @@ import { Buttons } from '../../../shared/buttons/buttons';
   styleUrl: './home-page.scss'
 })
 export class HomePage {
+  private router = inject(Router);
   faHeart = faHeart;
   faArrow = faArrowRight;
   faClock = faClock;
@@ -45,23 +46,22 @@ export class HomePage {
   faQuote = faQuoteLeft;
 
   minDate: Date;
-  selected = model<Date | null>(null);
 
-  serviceType: ServiceCard[] = [
+  serviceType: ServicesCard[] = [
     {
       title: 'Weddings',
       image: 'assets/b&w1.jpg',
-      link: '/portfolio/weddings'
+      path: '/portfolio/weddings'
     },
     {
       title: 'Sessions',
       image: 'assets/clients-4.jpg',
-      link: '/portfolio/engagements'
+      path: '/portfolio/engagements'
     },
     {
       title: 'Custom',
       image: 'assets/custsect.jpg',
-      link: '/portfolio/photoshoots'
+      path: '/portfolio/photoshoots'
     }
   ]
 
@@ -84,27 +84,21 @@ export class HomePage {
     'assets/welcome.jpg'
   ]
 
-  packageType: PackageCard[] = [
+  packageType: ServicesCard[] = [
     {
-      title: 'Wedding Packages',
-      image: 'assets/couple.jpg',
-      link: '/portfolio/weddings',
-      gradientFrom: 'from-yellow',
-      gradientVia: 'via-yellow-mid/80'
+      title: 'My approach',
+      image: 'assets/b&w1.jpg',
+      path: '/details/approach'
     },
     {
-      title: 'Engagement Packages',
+      title: 'Services & Pricing',
       image: 'assets/detwedd.jpg',
-      link: '/portfolio/engagements',
-      gradientFrom: 'from-pink',
-      gradientVia: 'via-pink-mid/80'
+      path: '/details/services'
     },
     {
-      title: 'Photoshoot Packages',
+      title: 'FAQs',
       image: 'assets/details.jpg',
-      link: '/portfolio/photoshoots',
-      gradientFrom: 'from-sand',
-      gradientVia: 'via-green-mid/80'
+      path: '/details/faqs'
     }
   ]
 
